@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Newsreader:wght@500&display=swap');
+
+  @font-face {
+    font-family: "Nata-Regular";
+    src: url('public/fonts/NataRegular/font.woff2') format('woff2'), url('public/fonts/NataRegular/font.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: "Nata-SemiBold";
+    src: url('public/fonts/NataSemiBold/font.woff2') format('woff2'), url('public/fonts/NataSemiBold/font.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: "Nata-ExtraBlack";
+    src: url('public/fonts/NataExtraBlack/font.woff2') format('woff2'), url('public/fonts/NataExtraBlack/font.woff') format('woff');
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #__next {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    overflow-x: hidden;
+    font-family: 'Newsreader', sans-serif;
+  }
+
+  .dom {
+    height: 100vh;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  a {
+    cursor: pointer;
+  }
+}

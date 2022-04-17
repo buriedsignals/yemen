@@ -46,6 +46,7 @@
     "react-flickity-component": "^3.6.2",
     "react-helmet": "^6.1.0",
     "react-twitter-embed": "^4.0.4",
+    "react-youtube": "^8.2.1",
     "rss": "^1.2.2",
     "styled-breakpoints": "^10.0.1",
     "styled-components": "^5.3.1",

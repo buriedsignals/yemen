@@ -1,4 +1,4 @@
-import { colorBlack, colorRed, colorWhite } from '@/helpers/styles'
+import { colorBlack, colorGrey, colorRed, colorWhite } from '@/helpers/styles'
 import { down } from 'styled-breakpoints'
 import styled from 'styled-components'
 
@@ -7,7 +7,7 @@ export const ArticleContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
   margin-bottom: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 170px;
   background: ${colorBlack};
   .gridContainer {
     .item {
@@ -199,8 +199,15 @@ export const DescriptionContainer = styled.div`
       margin-bottom: 20px;
     }
     &.darkest {
-      opacity: 0.4;
+      color: ${colorGrey};
     }
+    .subtitle {
+      margin-bottom: 57px;
+    }
+  }
+  a {
+    color: ${colorRed};
+    text-decoration: underline;
   }
 `
 
@@ -252,11 +259,28 @@ export const ListNumber = styled.ol`
 
 export const Section = styled.div`
   margin-top: 108px;
+  .space {
+    height: 120px;
+  }
   .title {
     display: flex;
     align-items: flex-end;
     margin-left: 187px;
-    margin-bottom: 74px;
+    margin-bottom: 100px;
+    &.center {
+      align-items: center;
+      margin-left: 0;
+      .line {
+        &:first-child {
+          margin-left: 0;
+          margin-right: 35px;
+          background: ${colorRed};
+        }
+        &:last-child {
+          background: ${colorWhite};
+        }
+      }
+    }
     h2 {
       color: ${colorWhite};
       font-family: "Nata-SemiBold";
@@ -275,13 +299,108 @@ export const Section = styled.div`
       margin-left: 35px;
     }
   }
+  .helping {
+    max-width: 500px;
+    margin: 0 auto;
+    p {
+      margin-bottom: 60px;
+      color: ${colorWhite};
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140.5%;
+      text-align: center;
+    }
+    a {
+      padding: 6px 13px;
+      color: ${colorWhite};
+      font-family: 'Nata-ExtraBlack';
+      font-size: 20px;
+      line-height: 94.5%;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background-color: ${colorRed};
+    }
+  }
   .container {
     max-width: 1060px;
     margin: 0 auto;
   }
+  .map-legend {
+    position: relative;
+    margin-bottom: 80px;
+    .legend {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 290px;
+      z-index: 2;
+      & > div {
+        width: 100%;
+      }
+      .mesure {
+        position: relative;
+        .colors {
+          width: 100%;
+          height: 17.5px;
+          background: linear-gradient(90deg, #FFF1F1 0%, #430707 100%);
+        }
+        p {
+          position: absolute;
+          bottom: calc(-100% - 7.5px);
+          margin: 0;
+          &:first-child {
+            left: 0;
+            transform: translate3D(-50%, 0, 0);
+          }
+          &:last-child {
+            right: 0;
+            transform: translate3D(50%, 0, 0);
+          }
+        }
+      }
+    }
+  }
+  .map-container {
+    position: relative;
+    & > div {
+      position: relative;
+      z-index: 2;
+      div {
+        &:first-child {
+          width: 500px;
+          margin-left: 660px;
+        }
+        &:nth-child(2) {
+          width: 275px;
+          margin-left: 85px;
+          margin-bottom: 430px;
+        }
+        &:last-child {
+          width: 500px;
+          margin-left: 660px;
+        }
+      }
+    }
+    figure {
+      position: absolute;
+      top: 50%;
+      transform: translate3D(0, -50%, 0);
+    }
+  }
   &.division {
     h2 span {
       display: block;
+    }
+  }
+  &.action {
+    .container > div {
+      margin: 0 auto;
+      text-align: center;
+    }
+    .container > figure {
+      margin: 32px auto 180px;
     }
   }
 `
@@ -289,10 +408,36 @@ export const Section = styled.div`
 export const DateContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 53px;
-  div {
+  gap: 50px;
+  & > div {
     position: relative;
     width: 50%;
+    figure {
+      position: absolute;
+      top: 50%;
+      width: 391px;
+      transform: translate3D(0, -50%, 0);
+      figcaption {
+        max-width: 85%;
+        margin: 0 auto;
+        padding-top: 40px;
+        color: ${colorWhite};
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140.5%;
+        text-align: center;
+      }
+    }
+  }
+  .youtube  {
+    iframe {
+      position: absolute;
+      top: 50%;
+      width: 100% !important;
+      transform: translate3D(0, -50%, 0);
+    }
   }
 `
 export const Date = styled.div`
@@ -329,12 +474,18 @@ export const Quote = styled.figure`
   blockquote {
     p {
       color: ${colorWhite};
+      span {
+        opacity: 0.4;
+      }
     }
   }
   figcaption {
     margin-top: 44px;
     cite {
       color: ${colorRed};
+      a {
+        text-decoration: underline;
+      }
     }
   }
 `

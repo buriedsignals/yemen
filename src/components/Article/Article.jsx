@@ -7,6 +7,8 @@ import Title from '../Title/Title';
 import Line from '../Line/Line';
 import Image from '../image/image';
 import IconArrow from '../icons/IconArrow';
+import Graph from '../Graph/Graph';
+import YouTube from 'react-youtube';
 
 export const ButtonStory = ({ srcImg, altImg, firstname, surname, ...props }) => {
   return <Style.ButtonStory {...props}>
@@ -96,7 +98,7 @@ export default function Article() {
               <h2><span>A history</span> of invasion</h2>
               <Line />
             </div>
-            <div className="history-container">
+            <div className="container">
               <Style.DateContainer>
                 <div className="date-container">
                   <Style.Date>1500</Style.Date>
@@ -148,6 +150,171 @@ export default function Article() {
               </Style.DateContainer>
             </div>
           </Style.Section>  
+          <Style.Section className='conflict'>
+            <div className="title">
+              <h2><span>Conflict</span> background</h2>
+              <Line />
+            </div>
+            <div className="container">
+              <Style.DateContainer>
+                <div>
+                  <Image src="/img/img-ali-abdullah-saleh.jpg" alt="Picture of Ali Abdullah Saleh">
+                    Ali Abdullah Saleh (R) was forced to hand over power to Abdrabbuh Mansour Hadi (L)
+                  </Image>
+                </div>
+                <Style.DescriptionContainer>
+                  <p>The Cold War had installed a political order in the Middle-East that collapsed along with the USSR in the early 1990s <a href="">[2]</a>. The former Soviet beneficiaries (Syria, Iraq, Libya and South Yemen) were forced to reconfigure their foreign policies and economic contracts; all of these countries are currently in civil war.</p>
+                  <p>In Yemen, the end of the Cold War brought unification between the North (whose patron remained the USA) and the South who had very little leverage in the negotiation. Ali Saleh became the first president of a unified Yemen.</p>
+                  <p>During the Arab Spring of 2011 the Yemeni population began protesting against Saleh’s selective austerity policies. He retaliated by conducting drone and economic warfare against his opponents (including al-Qaeda) until he was removed in  February 2012 after being in power for 33 years, and replaced by another Western figurehead, his deputy Abd Rabu Mansour Hadi.</p>
+                  <p>This is directly pulled from a UN Security Council Report <a href="/">[3]</a>:</p>
+                </Style.DescriptionContainer>
+              </Style.DateContainer>
+              <Style.Quote> {/* figure */}
+                <blockquote>
+                  <p>“The Panel has identified that Khaled Ali Abdullah Saleh has a significant role in the management of financial assets... suspicious transfers of significant funds during the period that certainly fall well outside the normal <span>fund management practices of high-wealth individuals... to launder $83,953,782 within a three-week period in December 2014.”</span></p>
+                </blockquote>
+                <figcaption>
+                  <cite>A U.N. Security Council Report</cite>
+                </figcaption>
+              </Style.Quote>
+              <Style.DateContainer>
+                <div className="date-container">
+                  <Style.Date>2015</Style.Date>
+                </div>
+                <Style.DescriptionContainer>
+                  <p>Upon arrival in office the first item on Hadi’s agenda was to continue his predecessor’s agenda, despite governing a population who knew he was acting on behalf of foreign interests he began various economic extraction schemes along with the privatization of state land. Most importantly he tried to impose a federation on Yemen which would divide the country into districts with the majority of remaining oil, gas and offshore resources would go to a vast southern Yemen territory to be ruled by a few handpicked officials, leaving the rest of the country impoverished. <a href="">[4]</a></p>
+                  <p>In September 2014, the Houthis (also known as the Zaidis) and many ordinary Yeminis (Sunni included) who were disgruntled with deteriorating conditions in the country, took control of Sana’a. <a href="">[bbc]</a></p>
+                  <p>In February 2015 the Houthis forced the resignation of Hadi in a contested constitutional draft, who moved his cabinet to Aden and declared it as the temporary capital of Yemen.</p>
+                  <p>A month later - March 24th 2015 - Hadi made a request for foreign military intervention in Yemen to oppose the Houthi’s ongoing military advancement towards Aden, aided by the former president Ali Saleh’s forces. Hadi fled to Saudi Arabia the next day. <a href="">[icj]</a></p>
+                  <p className='darkest'>On 26 March 2015, a Saudi-led coalition consisting of the UAE, Bahrain, Morocco, Qatar, Sudan, Kuwait, Egypt, and Jordan initiated Operation Decisive Storm which aimed to defeat the Houthis and restore Hadi’s government. The invasion would reverse what the coalition believed to be growing Iranian influence in the region. A couple hours after the coalition was formed, the Obama administration released a statement stressing its support to the coalition and the establishment of a Joint Combined Planning Cell with Saudi Arabia, in addition to pledging logistical and intelligence assistance. <a href="">[White House Archives]</a></p>
+                  <p className='darkest'>The coalition received military equipment and intelligence support from the US, UK and France [bbc], which have been put to use against civilians. All three countries are permanent members of the UN Security Council which is responsible for the welfare of Yemen and its people.</p>
+                  <p className='darkest'>In May that year the Houthis formed an alliance with former president Ali Saleh. The coalition ended on the 4th December 2017 with Saleh’s murder after the Houthis accused him of treason when he decided to sideline them in a deal backed by the UAE. <a href="">[Aljazeera]</a></p>
+                  <p className='darkest'>Why so much interest in Yemen? Dr. Blumi argues it is for the economic and geographical value of Yemen.</p>
+                </Style.DescriptionContainer>
+              </Style.DateContainer>
+            </div>
+          </Style.Section>  
+          <Style.Section className='players'>
+            <div className="title center">
+              <Line />
+              <h2><span>Key</span> player</h2>
+              <Line />
+            </div>
+            <div className="container">
+              <div className="map-container">
+                <div>
+                  <Style.DescriptionContainer>
+                    <p className='subtitle'>1- Houthi/Ansarullah (Partisans of God):</p>
+                    <p>The Houthis are just another name for the Zaidis of Yemen, adopted in 2004 when the Yemeni army and air force supported by Saudi Arabia suppressed a rebellion started in the Saada (the Houthis heartland) which killed “Hussien al-Houthi”, who died a martyr since he was representing his district in a struggle to recognize economic marginalization by Ali Abdullah Saleh who was making diplomatic concessions to the Saudis.</p>
+                  </Style.DescriptionContainer>
+                  <Style.DescriptionContainer>
+                    <p>Légende if légende is needed of course, otherwise on peut just delete ce paragraphe</p>
+                    <p>Légende if légende is needed of course, otherwise on peut just delete ce paragraphe</p>
+                  </Style.DescriptionContainer>
+                  <Style.DescriptionContainer>
+                    <p>Politicians have described the Houthis as “a revivalist movement” backed by Tehran as a part of the Saudi-Iran Cold War [8] and the majority of Western media has been pushing the same narrative, however history has shown us that the Zaydis have existed in Northern Yemen for over a millenium - so it’s difficult to argue for any kind of “revival”. The Zaydis are yet again refusing to bend the knee, the Ottoman infidel label has simply evolved to the American classification of terrorrist organisation. It is important to note that the Houthis are resident Zaydi Shiite Muslims, who have significant differences in their doctrine and beliefs from the Shiites who govern Iran.</p>
+                    <p>From an article by Bruce Riedel from the Brookings Institution on February 2, 2022:</p>
+                  </Style.DescriptionContainer>
+                </div>
+                <Image src="/img/img-map-yemen.png" alt="Map of Yemen" />
+              </div>
+              <Style.Quote> {/* figure */}
+                <blockquote>
+                  <p>“The Houthis have won the war in Yemen, defeating their opponents in the civil war, the Saudis who intervened in 2015 against them, and the United States which backed the Saudis. It is a remarkable accomplishment for a militia group with no air force or navy.”</p>
+                </blockquote>
+                <figcaption>
+                  <cite>Bruce Riedel <a href="">[Brookings]</a></cite>
+                </figcaption>
+              </Style.Quote>
+              <Style.DateContainer>
+                <Style.DescriptionContainer>
+                    <p className="subtitle">2- Saudi Arabia, UAE, US:</p>
+                    <p>Most of the countries that participated in the early days of the coalition have withdrawn from the war, with the exception of Saudi Arabia and the UAE backed by the US and most recently Israel. <a href="">[Reuters]</a></p>
+                    <p>According to SIPIRI Saudi Arabia is the largest arms importer in the world with a budget of more than $50bn on its military, 79% of its military imports come from the US, 9% from UK, and 4% from France.</p>
+                    <p>The sale of weapons from the US to Saudi Arabia has steadily increased since 2015 and doubled in 2017 when Donald Trump's became president: </p>
+               </Style.DescriptionContainer>
+                <div></div>
+              </Style.DateContainer>
+              <Graph></Graph>
+              <Style.DescriptionContainer>
+                <p>Hadi remains in Saudi Arabia and is still recognized by everyone except his constituents as the President of Yemen. The Saudis command the coalition and Hadi’s government, while the Emiratis continue training separist movements in the south. <a href="">[France24]</a></p>
+              </Style.DescriptionContainer>
+            </div>
+          </Style.Section> 
+          <Style.Section className='impacts'>
+            <div className="title center">
+              <Line />
+              <h2><span>Impacts</span> of the war</h2>
+              <Line />
+            </div>
+            <div className="container">
+              <Style.DateContainer>
+                <Style.DescriptionContainer>
+                  <p className='subtitle'>Casualties</p>
+                  <p>According to a statement from the president and CEO of the U.S. Institute of Peace Lise Grande to Congress in April 2021:</p>
+                  <p>“The conflict in Yemen has lasted 6 years, resulted in the world’s worst humanitarian crisis, wrecked public institutions, created new forms of corruption, fragmented political power and turned Yemen into a failed state likely to collapse, or worse, split into independent, separately administered zones. The humanitarian crisis, in particular, is so shocking in its magnitude, it is hard even to describe”. <a href="">[U.S. POLICY ON YEMEN]</a></p>
+                  <p>Since 2015, the Saudi-led coalition has carried out more than 24000 air raids using precision-guided munitions made by the US, killing and wounding more than 18,000 Yemenis:</p>
+                </Style.DescriptionContainer>
+              </Style.DateContainer>
+              <div className="map-legend">
+                <Image src="/img/img-map-yemen-2.png" alt="Map of Yemen" />
+                <div className="legend">
+                  <Style.DescriptionContainer>
+                    <p>Map of Civilian Fatalities from Saudi Coalition Air Raids until January 2022</p>
+                    <p>Fatalities</p>
+                    <div className="mesure">
+                      <div className="colors"></div>
+                      <p>0</p>
+                      <p>2.101</p>
+                    </div>
+                  </Style.DescriptionContainer>
+                </div>
+              </div>
+              <Style.DateContainer>
+                <Style.DescriptionContainer>
+                  <p>A third of these bombings have been against civilian targets, the intent being to destroy public infrastructure such as food markets, which are essential for the population’s survival. <a href="">[12]</a></p>
+                  <p>As a part of this campaign we are making public the largest documentation project of massacres committed by the coalition in Yemen, recorded since March 26 2015.</p>
+                </Style.DescriptionContainer>
+              </Style.DateContainer>
+              <div className="space"></div>
+              <Style.DateContainer>
+                <Style.DescriptionContainer>
+                  <p className='subtitle'>Food scarcity</p>
+                  <p>In 2015 the UN adopted a resolution for a maritime blockade to be imposed in the Red Sea. Warships intercepting cargo shipments heading for Yemen have been causing significant delays in humanitarian aid intended to reach Yemenis.</p>
+                  <p>In addition to which AP reporters have proven that thousands of families are not receiving international food aid because shipments have been seized by the Houthis or the coalition.</p>
+                  <p>In Sep 2021, the head of the UN food agency announced that 16 million Yemenis “are marching towards starvation”, he added that lack of funding may lead to the death of hundreds of thousands of children.</p>
+                  <p>According to UNOCHA the situation in Yemen in 2022 is expected to worsen, with more than 20.7 million person in need of humanitarian assistance, and the funding coverage required to reach 16 million person is 3.9 billion dollars, the same funding required last year but unfortunately 57% of this funduing was secured.</p>
+                </Style.DescriptionContainer>
+                <div className='youtube'>
+                  <YouTube videoId="sTnm5jvjgjM" width="500" playerVars={{ autoplay: 1 }}/>
+                </div>
+              </Style.DateContainer>
+            </div>
+          </Style.Section>
+          <Style.Section className='action'>
+            <div className="title center">
+              <Line />
+              <h2><span>What can we do?</span> Stop the blockade</h2>
+              <Line />
+            </div>
+            <div className="container">
+              <Style.DescriptionContainer>
+                <p>According to the article of Bruce Riedel from the Brookings Institution on February 2, 2022:</p>
+              </Style.DescriptionContainer>
+              <Style.Quote>
+                <blockquote>
+                  <p>“The urgent imperative is to halt the blockade and get aid to the Yemeni people. That should be America’s priority.”</p>
+                </blockquote>
+                <figcaption>
+                  <cite>Bruce Riedel <a href="">[Brookings]</a></cite>
+                </figcaption>
+              </Style.Quote>
+              <div className="helping">
+                <p>Sign our petition for Congress to pressure Saudi Arabia to stop the war on Yemen and end the siege.</p>
+                <a href=''>Stop the blockade</a>
+              </div>
+            </div>
+          </Style.Section> 
         </Style.Content>
         <Summary />
       </Style.ContentContainer>

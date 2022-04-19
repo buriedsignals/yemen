@@ -77,7 +77,7 @@ export const Background = styled.div`
   position: absolute;
   width: 100vw;
   height: 50vh;
-  background-image: url(img/bg-article.jpg);
+  background-image: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 20%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0.7) 100%), url(img/bg-article.jpg);
   background-size: cover;
   background-position: center;
 `
@@ -151,14 +151,20 @@ export const ButtonStory = styled.a`
 `
 
 export const SectionIntro = styled.div`
-  max-width: calc(1060px - 56px);
-  margin: 0 auto;
-  padding-top: 95px;
-  padding-left: 28px;
-  padding-right: 28px;
+  // max-width: calc(1060px - 56px);
+  // margin: 0 auto;
+  // padding-top: 95px;
+  // padding-left: 28px;
+  // padding-right: 28px;
   .introContainer  {
+    max-width: calc(1060px - 56px);
+    margin: 0 auto;
+    padding-top: 95px;
+    padding-left: 28px;
+    padding-right: 28px;
     display: flex;
     justify-content: space-between;
+    gap: 30px;
   }
   h2 {
     color: ${colorWhite};
@@ -174,10 +180,12 @@ export const SectionIntro = styled.div`
     margin-top: 35px;
   }
   .listIntroContainer {
-    position: relative;
-    margin-top: 60px;
+    padding-top: 95px;
     li {
       position: relative;
+      .liContainer {
+        position: relative;
+      }
       .itemContainer {
         position: relative;
         z-index: 1;
@@ -208,9 +216,6 @@ export const DescriptionContainer = styled.div`
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-    &.darkest {
-      color: ${colorGrey};
-    }
     .subtitle {
       margin-bottom: 57px;
     }
@@ -224,33 +229,52 @@ export const DescriptionContainer = styled.div`
 export const ListNumber = styled.ol`
   position: relative;
   z-index: 1;
+
   li {
+    position: relative;
+    max-width: calc(1060px - 56px);
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
     color: ${colorWhite};
+    .liContainer {
+      position: relative;
+    }
     &:nth-child(4n + 1) {
-      margin-left: 136px;
+      .liContainer {
+        margin-left: 36px;
+      }
       figure {
         position: relative;
         top: 0;
-        left: -136px;
-        width: 1060px;
+        left: 0;
+        width: 100vw;
         height: auto;
         transform: inherit;
       }
     }
     &:nth-child(4n + 2) {
-      margin-left: 555px;
+      .liContainer {
+        margin-left: 455px;
+      }
     }
     &:nth-child(4n + 3) {
-      margin-left: 350px;
+      .liContainer {
+        margin-left: 250px;
+      }
       .itemContainer > div {
         width: 283px;
       }
     }
     &:nth-child(4n + 4) {
-      margin-left: 555px;
+      .liContainer {
+        margin-left: 455px;
+      }
     }
     &:not(:last-child) {
-      margin-bottom: 72px;
+      .liContainer {
+        margin-bottom: 72px;
+      }
     }
     span {
       position: relative;

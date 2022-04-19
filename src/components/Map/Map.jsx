@@ -41,6 +41,7 @@ export const FilterSlider = ({ ...props }) => {
           slidesPerView={1}
           centeredSlides={true}
           initialSlide={slides.length - 1}
+          allowTouchMove={true}
           onSlideChangeTransitionEnd={(swiper) => {
             swiper.slides.forEach(slide => {
               if (slide.classList.contains('swiper-slide-active')) {
@@ -50,7 +51,11 @@ export const FilterSlider = ({ ...props }) => {
               }
             });
           }}
-          onClick={(swiper, e) => swiper.slideTo(e.target.dataset.swiperSlideIndex)}
+          onClick={(swiper, e) => {
+            swiper.slideTo(e.target.dataset.swiperSlideIndex)
+            
+      console.log('ok')
+          }}
         >
           {slides.map((slideContent, index) => (
             <SwiperSlide key={slideContent} virtualIndex={index}>
@@ -89,17 +94,33 @@ export const Popup = ({ ...props }) => {
 
   return (
     <Style.PopupContainer>
-      <div className="header"></div>
+      <div className="header">
+        <button onClick={() => {
+          useStore.setState({
+            openPopup: false,
+          })
+        }} >Back to map</button>
+      </div>
       <div className="main-container">
         <h2 className='title'>
           <IconPin /> { title }
         </h2>
         <p className='date'>{ date }</p>
-        { selectMedia() }
+      </div>
+      { selectMedia() }
+      <div className="main-container">
         <div className="datas">
-          <div className="datas-item">
-            <p className="data-value">{ fatalities }</p>
-            <p className="data-label">Fatalities</p>
+          <div className="data">
+            <div className="data-item">
+              <p className="data-value">{ fatalities }</p>
+              <p className="data-label">Fatalities</p>
+            </div>
+          </div>
+          <div className="data">
+            <div className="data-item">
+              <p className="data-value">{ injuries }</p>
+              <p className="data-label">Injuries</p>
+            </div>
           </div>
         </div>
         <div className="description">
@@ -113,10 +134,13 @@ export const Popup = ({ ...props }) => {
 
 export default function Map() {
   const route = useRouter().route;
+  const [openPopup] = useStore((state) => [ state.openPopup ])
   return (
     <Style.MapContainer>
-      <Popup />
-      <Style.PageContainer>
+      {
+        openPopup && <Popup />
+      }
+      <Style.PageContainer className={openPopup && 'openedPopup'}>
         <Header route={route} />
         <MapBox />
         <FilterSlider />

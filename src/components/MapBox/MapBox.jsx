@@ -22,6 +22,13 @@ export default function MapBox() {
     useStore.getState().mapFilterDate
   ])
   useEffect(() => {
+    if (map.current) {
+      map.current.resize();
+    }
+  }, [
+    useStore.getState().openPopup
+  ])
+  useEffect(() => {
     if (map.current) map.current.resize()
     if (map.current) return
     mapboxgl.clearStorage()
@@ -49,7 +56,9 @@ export default function MapBox() {
         openPopup: true,
         popupProperties: feature.properties,
       })
-      map.current.flyTo({center: feature.geometry.coordinates})
+      setTimeout(() => {
+        map.current.flyTo({center: feature.geometry.coordinates})
+      }, 0)
     })
   }, [])
   return (

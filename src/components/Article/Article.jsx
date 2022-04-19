@@ -24,7 +24,8 @@ export default function Article() {
   const route = useRouter().route;
   return (
     <Style.ArticleContainer>
-      <Style.Background></Style.Background>
+      <Style.Background>
+      </Style.Background>
       {/* <Grid /> */}
       <Style.ContentContainer>
         <Header route={route} />
@@ -60,40 +61,50 @@ export default function Article() {
             <div className="listIntroContainer">
               <Style.ListNumber>
                 <li>
-                  <span className='numberList'>1</span>
-                  <Style.DescriptionContainer>
-                    <p>Did you know your Starbucks mocha takes its name from the town of al-Mukha in Yemen? For a few years Yemen was the sole coffee producer in the world. Fortunately for the planet the Dutch broke Yemen’s monopoly in the 18th century when they smuggled coffee trees out of the country and cultivated them in their own colonies.</p>
-                  </Style.DescriptionContainer>
-                </li>
-                <li>
-                  <span className='numberList'>5</span>
-                  <Style.DescriptionContainer>
-                    <p>Sanaa’s Old City is believed to have been built by Shem, the son of Noah, which would make it one of the world’s oldest cities at over two thousand years old.</p>
-                  </Style.DescriptionContainer>
-                </li>
-                <li>
-                  <div className="itemContainer">
-                    <span className='numberList'>3</span>
+                  <div className="liContainer">
+                    <span className='numberList'>1</span>
                     <Style.DescriptionContainer>
-                      <p>Yemeni men wear Janbiyas as a symbol of honour. They are only unsheathed in extreme cases of conflict.</p>
+                      <p>Did you know your Starbucks mocha takes its name from the town of al-Mukha in Yemen? For a few years Yemen was the sole coffee producer in the world. Fortunately for the planet the Dutch broke Yemen’s monopoly in the 18th century when they smuggled coffee trees out of the country and cultivated them in their own colonies.</p>
                     </Style.DescriptionContainer>
                   </div>
-                  <Image src="/img/img-janbiyas.png" alt="Picture of janbiyas" />
                 </li>
                 <li>
-                  <span className='numberList'>4</span>
-                  <Style.DescriptionContainer>
-                    <p>Yemen is widely acclaimed as the home of Bilqis, Queen of Saba. The ancient Sabean people who lived under her rule spoke an old Semitic language which is still used today on the island of Socotra.</p>
-                  </Style.DescriptionContainer>
-                </li>
-                <li>
-                  <div className="itemContainer">
-                    <span className='numberList'>2</span>
+                  <div className="liContainer">
+                    <span className='numberList'>5</span>
                     <Style.DescriptionContainer>
-                      <p>Shibam is a walled desert city with mankind’s oldest (and therefore most sustainable) skyscrapers at 500 years old, built by stacking mud bricks and maintained by its few remaining residents.</p>
+                      <p>Sanaa’s Old City is believed to have been built by Shem, the son of Noah, which would make it one of the world’s oldest cities at over two thousand years old.</p>
                     </Style.DescriptionContainer>
                   </div>
+                </li>
+                <li>
+                  <div className="liContainer">
+                    <div className="itemContainer">
+                      <span className='numberList'>3</span>
+                      <Style.DescriptionContainer>
+                        <p>Yemeni men wear Janbiyas as a symbol of honour. They are only unsheathed in extreme cases of conflict.</p>
+                      </Style.DescriptionContainer>
+                    </div>
+                    <Image src="/img/img-janbiyas.png" alt="Picture of janbiyas" />
+                  </div>
+                </li>
+                <li>
+                  <div className="liContainer">
+                    <span className='numberList'>4</span>
+                    <Style.DescriptionContainer>
+                      <p>Yemen is widely acclaimed as the home of Bilqis, Queen of Saba. The ancient Sabean people who lived under her rule spoke an old Semitic language which is still used today on the island of Socotra.</p>
+                    </Style.DescriptionContainer>
+                  </div>
+                </li>
+                <li>
                   <Image src="/img/img-shibam-wadi.jpg" alt="Picture of Shibam Wadi, Yemen" />
+                  <div className="liContainer">
+                    <div className="itemContainer">
+                      <span className='numberList'>2</span>
+                      <Style.DescriptionContainer>
+                        <p>Shibam is a walled desert city with mankind’s oldest (and therefore most sustainable) skyscrapers at 500 years old, built by stacking mud bricks and maintained by its few remaining residents.</p>
+                      </Style.DescriptionContainer>
+                    </div>
+                  </div>
                 </li>
               </Style.ListNumber>
             </div>

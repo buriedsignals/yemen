@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components'
 
 export const MapContainer = styled.div`
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  z-index: 0;
   .mapboxgl-popup-tip {
     display: none;
   }

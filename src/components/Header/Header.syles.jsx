@@ -3,7 +3,7 @@ import { down } from 'styled-breakpoints'
 import { colorWhite } from '@/helpers/styles'
 
 export const HeaderContainer = styled.div`
-  position: fixed;
+  position: absolute;
   top: 26px; left: 26px;
   display: flex;
   justify-content: space-between;

@@ -151,9 +151,11 @@ export const ButtonStory = styled.a`
 `
 
 export const SectionIntro = styled.div`
-  max-width: 1060px;
+  max-width: calc(1060px - 56px);
   margin: 0 auto;
   padding-top: 95px;
+  padding-left: 28px;
+  padding-right: 28px;
   .introContainer  {
     display: flex;
     justify-content: space-between;
@@ -174,14 +176,22 @@ export const SectionIntro = styled.div`
   .listIntroContainer {
     position: relative;
     margin-top: 60px;
-    figure {
-      position: absolute;
-      top: 50%;
-      left: -150px;
-      width: 592px;
-      height: 586px;
-      transform: translate3D(0, -50%, 0);
-      z-index: 0;
+    li {
+      position: relative;
+      .itemContainer {
+        position: relative;
+        z-index: 1;
+      }
+      figure {
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        width: 392px;
+        height: 386px;
+        // margin-left: 175px;
+        transform: translate3D(-100%,-50%,0);
+        z-index: 0;
+      }
     }
   }
 `
@@ -218,13 +228,21 @@ export const ListNumber = styled.ol`
     color: ${colorWhite};
     &:nth-child(4n + 1) {
       margin-left: 136px;
+      figure {
+        position: relative;
+        top: 0;
+        left: -136px;
+        width: 1060px;
+        height: auto;
+        transform: inherit;
+      }
     }
     &:nth-child(4n + 2) {
       margin-left: 555px;
     }
     &:nth-child(4n + 3) {
       margin-left: 350px;
-      div {
+      .itemContainer > div {
         width: 283px;
       }
     }
@@ -324,8 +342,9 @@ export const Section = styled.div`
     }
   }
   .container {
-    max-width: 1060px;
+    max-width: calc(1060px - 56px) !important;
     margin: 0 auto;
+    padding: 0 28px;
   }
   .map-legend {
     position: relative;

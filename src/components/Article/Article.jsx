@@ -66,16 +66,19 @@ export default function Article() {
                   </Style.DescriptionContainer>
                 </li>
                 <li>
-                  <span className='numberList'>2</span>
+                  <span className='numberList'>5</span>
                   <Style.DescriptionContainer>
-                    <p>Shibam is a walled desert city with mankind’s oldest (and therefore most sustainable) skyscrapers at 500 years old, built by stacking mud bricks and maintained by its few remaining residents.</p>
+                    <p>Sanaa’s Old City is believed to have been built by Shem, the son of Noah, which would make it one of the world’s oldest cities at over two thousand years old.</p>
                   </Style.DescriptionContainer>
                 </li>
                 <li>
-                  <span className='numberList'>3</span>
-                  <Style.DescriptionContainer>
-                    <p>Yemeni men wear Janbiyas as a symbol of honour. They are only unsheathed in extreme cases of conflict.</p>
-                  </Style.DescriptionContainer>
+                  <div className="itemContainer">
+                    <span className='numberList'>3</span>
+                    <Style.DescriptionContainer>
+                      <p>Yemeni men wear Janbiyas as a symbol of honour. They are only unsheathed in extreme cases of conflict.</p>
+                    </Style.DescriptionContainer>
+                  </div>
+                  <Image src="/img/img-janbiyas.png" alt="Picture of janbiyas" />
                 </li>
                 <li>
                   <span className='numberList'>4</span>
@@ -84,13 +87,15 @@ export default function Article() {
                   </Style.DescriptionContainer>
                 </li>
                 <li>
-                  <span className='numberList'>5</span>
-                  <Style.DescriptionContainer>
-                    <p>Sanaa’s Old City is believed to have been built by Shem, the son of Noah, which would make it one of the world’s oldest cities at over two thousand years old.</p>
-                  </Style.DescriptionContainer>
+                  <div className="itemContainer">
+                    <span className='numberList'>2</span>
+                    <Style.DescriptionContainer>
+                      <p>Shibam is a walled desert city with mankind’s oldest (and therefore most sustainable) skyscrapers at 500 years old, built by stacking mud bricks and maintained by its few remaining residents.</p>
+                    </Style.DescriptionContainer>
+                  </div>
+                  <Image src="/img/img-shibam-wadi.jpg" alt="Picture of Shibam Wadi, Yemen" />
                 </li>
               </Style.ListNumber>
-              <Image src="/img/img-janbiyas.png" alt="Picture of janbiyas" />
             </div>
           </Style.SectionIntro>
           <Style.Section className='history'>

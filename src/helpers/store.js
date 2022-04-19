@@ -4,11 +4,18 @@ const useStore = create((set) => {
   return {
     router: {},
     dom: null,
-    openTwitterModal: true,
-    filterConflicts: true,
-    filterBombing: true,
-    filterTroops: true,
-    updateDateJson: null,
+    mapFilterDate: 'All',
+    openPopup: false,
+    popupProperties: {
+      date: "",
+      description: "",
+      fatalities: "",
+      injuries: "",
+      media_url: "",
+      source_url: "",
+      title: "",
+      years: "",
+    }
   }
 })
 

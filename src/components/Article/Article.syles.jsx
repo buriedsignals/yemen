@@ -54,22 +54,66 @@ export const Content = styled.div`
 export const SectionHero = styled.div`
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 50vh;
+  ${down('md')} {
+    height: 43.125vh;
+  }
   .title {
     width: 480px;    
     font-size: 100px;
     line-height: 94.5%;
+    ${down('md')} {
+      width: 242px;  
+      padding: 20px 0 16px;
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+  .moreMobil {
+    display: none;
+    p {
+      color: ${colorWhite};
+      font-family: 'Newsreader';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 94.5%;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-align: center;
+      &:first-child {
+        margin-bottom: 18px; 
+      }
+    }
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      .socialItem {
+        svg {
+          width: 20px;
+        }
+      }
+    }
+    ${down('md')} {
+      display: block;
+    }
   }
   .line {
     position: absolute;
     bottom: 42.5px; left: 50%;
     width: 85px;
     height: 3px;
-    background: linear-gradient(90deg, ${colorRed} 25%, ${colorWhite} 25%);
+    background: linear-gradient(90deg, ${colorRed} 35%, ${colorWhite} 35%);
     transform: translate3D(-50%, 21.25px,0) rotate3d(0, 0, 1, -90deg);
+    ${down('md')} {
+      bottom: 26.25px;
+      width: 42.5px;  
+    }
   }
 `
 
@@ -80,6 +124,10 @@ export const Background = styled.div`
   background-image: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 20%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0.7) 100%), url(img/bg-article.jpg);
   background-size: cover;
   background-position: center;
+  ${down('md')} {
+    height: 43.125vh;
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 33.33%, rgba(0,0,0,0.5) 33.33%, rgba(0,0,0,0.5) 66.66%, rgba(0,0,0,0.6) 66.66%, rgba(0,0,0,0.6) 100%), url(img/bg-article.jpg);
+  }
 `
 
 export const SectionStories = styled.div`
@@ -151,20 +199,15 @@ export const ButtonStory = styled.a`
 `
 
 export const SectionIntro = styled.div`
-  // max-width: calc(1060px - 56px);
-  // margin: 0 auto;
-  // padding-top: 95px;
-  // padding-left: 28px;
-  // padding-right: 28px;
+  padding-top: 95px;
   .introContainer  {
-    max-width: calc(1060px - 56px);
-    margin: 0 auto;
-    padding-top: 95px;
-    padding-left: 28px;
-    padding-right: 28px;
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    max-width: calc(1060px - 56px);
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
   }
   h2 {
     color: ${colorWhite};
@@ -180,9 +223,15 @@ export const SectionIntro = styled.div`
     margin-top: 35px;
   }
   .listIntroContainer {
-    padding-top: 95px;
+    position: relative;
+    margin-top: 60px;
     li {
-      position: relative;
+      .subliContainer {
+        max-width: calc(1060px - 56px);
+        margin: 0 auto;
+        padding-left: 28px;
+        padding-right: 28px;
+      }
       .liContainer {
         position: relative;
       }
@@ -193,7 +242,7 @@ export const SectionIntro = styled.div`
       figure {
         position: absolute;
         top: 50%;
-        left: 15%;
+        left: 10%;
         width: 392px;
         height: 386px;
         // margin-left: 175px;
@@ -216,8 +265,15 @@ export const DescriptionContainer = styled.div`
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-    .subtitle {
-      margin-bottom: 57px;
+    &.subtitle {
+      margin-bottom: 30px;
+      font-family: 'Newsreader';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140.5%;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
     }
   }
   a {
@@ -229,52 +285,47 @@ export const DescriptionContainer = styled.div`
 export const ListNumber = styled.ol`
   position: relative;
   z-index: 1;
-
   li {
-    position: relative;
-    max-width: calc(1060px - 56px);
-    margin: 0 auto;
-    padding-left: 28px;
-    padding-right: 28px;
     color: ${colorWhite};
-    .liContainer {
+    &.liHybrid {
       position: relative;
+      figure {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: inherit;
+        width: 100vw;
+        height: auto;
+        transform: inherit;
+      }
+      .subsubliContainer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      .subliContainer {
+        margin-bottom: 45px;
+      }
     }
     &:nth-child(4n + 1) {
       .liContainer {
         margin-left: 36px;
       }
-      figure {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: auto;
-        transform: inherit;
-      }
     }
-    &:nth-child(4n + 2) {
-      .liContainer {
-        margin-left: 455px;
-      }
+    &:nth-child(4n + 2) .liContainer {
+      margin-left: 455px;
     }
-    &:nth-child(4n + 3) {
-      .liContainer {
-        margin-left: 250px;
-      }
+    &:nth-child(4n + 3) .liContainer {
+      margin-left: 250px;
       .itemContainer > div {
         width: 283px;
       }
     }
-    &:nth-child(4n + 4) {
-      .liContainer {
-        margin-left: 455px;
-      }
+    &:nth-child(4n + 4) .liContainer {
+      margin-left: 455px;
     }
-    &:not(:last-child) {
-      .liContainer {
-        margin-bottom: 72px;
-      }
+    &:not(:last-child) .liContainer {
+      margin-bottom: 72px;
     }
     span {
       position: relative;
@@ -300,7 +351,7 @@ export const ListNumber = styled.ol`
 `
 
 export const Section = styled.div`
-  margin-top: 108px;
+  padding-top: 108px;
   .space {
     height: 120px;
   }
@@ -370,6 +421,18 @@ export const Section = styled.div`
     margin: 0 auto;
     padding: 0 28px;
   }
+  .map-raids {
+    margin: 80px 0;
+    figure {
+      margin-bottom: 20px;
+    }
+    & > div {
+      width: 100%;
+    }
+    a {
+      margin-top: 50px;
+    }
+  }
   .map-legend {
     position: relative;
     margin-bottom: 80px;
@@ -413,7 +476,8 @@ export const Section = styled.div`
       div {
         &:first-child {
           width: 500px;
-          margin-left: 660px;
+          margin-left: 460px;
+          padding-left: 50px;
         }
         &:nth-child(2) {
           width: 275px;
@@ -422,7 +486,8 @@ export const Section = styled.div`
         }
         &:last-child {
           width: 500px;
-          margin-left: 660px;
+          margin-left: 460px;
+          padding-left: 50px;
         }
       }
     }
@@ -443,7 +508,15 @@ export const Section = styled.div`
       text-align: center;
     }
     .container > figure {
-      margin: 32px auto 180px;
+      margin: 32px auto 0;
+      &::after {
+        content: '';
+        display: block;
+        width: 360px;
+        height: 1px;
+        margin: 80px auto 100px;
+        background: ${colorWhite};
+      }
     }
   }
 `

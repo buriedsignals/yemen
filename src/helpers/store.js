@@ -15,6 +15,10 @@ const useStore = create((set) => {
       source_url: "",
       title: "",
       years: "",
+    },
+    summary: {
+      indexChapter: 0,
+      progress: 0
     }
   }
 })

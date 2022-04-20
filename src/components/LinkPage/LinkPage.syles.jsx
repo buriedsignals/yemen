@@ -1,4 +1,5 @@
 import { colorRed, colorWhite } from '@/helpers/styles'
+import { down } from 'styled-breakpoints'
 import styled from 'styled-components'
 
 export const LinkPageContainer = styled.a`
@@ -10,6 +11,9 @@ export const LinkPageContainer = styled.a`
   line-height: 94.5%;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  ${down('md')} {
+    font-size: 16px;
+  }
   &::before {
     content: '';
     display: block;

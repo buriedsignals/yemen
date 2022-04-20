@@ -11,11 +11,24 @@ export const HeaderContainer = styled.div`
   width: calc(100% - 52px);
   z-index: 10;
   ${down('md')} {
-    top: 11px; left: 14px;
+    top: 14px; left: 14px;
     width: calc(100% - 28px);
   }
   .linkPage {
     margin-left: 20px;
+  }
+  ${down('md')} {
+    &.isArticle {
+      .socialContainer {
+        a {
+          width: max-content;
+          margin-right: 20px;
+        }
+      }
+      .socialItem {
+        display: none;
+      }
+    }
   }
 `
 

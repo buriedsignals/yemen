@@ -14,12 +14,13 @@ export const SummaryContainer = styled.div`
   z-index: 10;
   p {
     width: calc(20vw - 25px);
+    height: 27px;
     color: ${colorWhite};
     font-family: 'Newsreader';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 94.5%;
+    line-height: 1.25;
     letter-spacing: 0.18em;
     text-transform: uppercase;
   }

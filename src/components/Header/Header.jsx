@@ -4,10 +4,12 @@ import * as Style from './Header.syles'
 import IconFacebook from '../icons/IconFacebook'
 import IconTwitter from '../icons/IconTwitter'
 import LinkPage from '../LinkPage/LinkPage'
+import { useBreakpoint } from 'styled-breakpoints'
 
 export default function Header({route = null}) {
+  console.log(useBreakpoint)
   return (
-    <Style.HeaderContainer>
+    <Style.HeaderContainer className={ route == "/article" && 'isArticle' }>
       { route == "/" ? 
         <Link href='/'>
           <Style.LinkLogoContainer>
@@ -23,12 +25,12 @@ export default function Header({route = null}) {
           : route == "/map" &&
             <LinkPage href="/article">Read the article</LinkPage>
       }
-      <Style.SocialContainer>
+      <Style.SocialContainer className="socialContainer">
         { route == "/article" &&  <LinkPage href='google.fr' target="_blank">Stop the blockage</LinkPage> }
-        <a href='' target="_blank">
+        <a className="socialItem" href='' target="_blank">
             <IconFacebook />
         </a>
-        <a href='' target="_blank">
+        <a className="socialItem" href='' target="_blank">
             <IconTwitter />
         </a>
       </Style.SocialContainer>

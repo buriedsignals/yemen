@@ -18,15 +18,15 @@ export const ScotchContainer = styled.div`
   ` : css`
     bottom: 0;
     left: 80vw;
-    width: 8.88vw;
+    width: 8.125vw;
     height: 82.71vh;
     transform: translate3D(-25%, 0, 0);
     ${down('md')} {
       left: 66.66vw;
-      width: 14.72vw;
+      width: 13.33vw;
       height: 43.28vh;
     }
   `}
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 18.75%, #FFFFFF 40.1%, rgba(255, 255, 255, 0.22) 100%);
-  opacity: 0.15;
+  opacity: 0.05;
 `

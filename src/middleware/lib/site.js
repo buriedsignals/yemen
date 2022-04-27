@@ -225,7 +225,7 @@ export function constructPageMetadata(
 export function helmetSettingsFromMetadata(metadata = {}, options = {}) {
   const { link = [], meta = [], setTitle = true } = options
 
-  metadata.title = 'Ukraine'
+  metadata.title = 'The Yemen Tribute'
 
   const sanitizedDescription = removeExtraSpaces(metadata.description)
 

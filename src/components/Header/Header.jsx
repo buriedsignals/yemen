@@ -5,11 +5,27 @@ import IconFacebook from '../icons/IconFacebook'
 import IconTwitter from '../icons/IconTwitter'
 import LinkPage from '../LinkPage/LinkPage'
 import { useBreakpoint } from 'styled-breakpoints'
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
 
-export default function Header({route = null}) {
-  console.log(useBreakpoint)
+export default function Header({animate = false, route = null, ...props}) {
+  const headerRef = useRef(null);
+  const urlSocialShare = 'https://www.youtube.com/watch?v=AkyXDDXzPyw'
+  useEffect(() => {
+    if (animate) {
+      const tl = gsap.timeline()
+      if (headerRef.current) {
+        tl.fromTo(headerRef.current, 1, {opacity: 0 }, {opacity: 1}, '+=2')
+      }
+      return () => {
+        if (tl) {
+          tl.kill()
+        }
+      }
+    }
+  }, []);
   return (
-    <Style.HeaderContainer className={ route == "/article" && 'isArticle' }>
+    <Style.HeaderContainer ref={headerRef} {...props} className={ route == "/article" && 'isArticle' }>
       { route == "/" ? 
         <Link href='/'>
           <Style.LinkLogoContainer>
@@ -22,15 +38,17 @@ export default function Header({route = null}) {
         </Link>
         : route == "/article" ?
           <LinkPage href="/map">Explore the map</LinkPage>
-          : route == "/map" &&
+          : route == "/map" ?
             <LinkPage href="/article">Read the article</LinkPage>
+            : route == "/story/[id]" &&
+              <LinkPage href="/article">Go back to the article</LinkPage>
       }
       <Style.SocialContainer className="socialContainer">
-        { route == "/article" &&  <LinkPage href='google.fr' target="_blank">Stop the blockage</LinkPage> }
-        <a className="socialItem" href='' target="_blank">
+        { route == "/article" &&  <LinkPage href='https://chng.it/YSz8sBy8hg' target="_blank">Stop the blockage</LinkPage> }
+        <a className="socialItem" href={`https://www.facebook.com/sharer/sharer.php?p[url]=${urlSocialShare}`} target="_blank">
             <IconFacebook />
         </a>
-        <a className="socialItem" href='' target="_blank">
+        <a className="socialItem" href={`https://twitter.com/intent/tweet?url=${urlSocialShare}`} target="_blank">
             <IconTwitter />
         </a>
       </Style.SocialContainer>

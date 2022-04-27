@@ -7,31 +7,67 @@ import Credit from '../Credit/Credit'
 import Title from '../Title/Title'
 import Line from '../Line/Line'
 import LinkPage from '../LinkPage/LinkPage'
+import gsap from 'gsap'
+import { CustomEase } from "gsap/dist/CustomEase";
+gsap.registerPlugin(CustomEase);
+const ease = CustomEase.create("custom", "M0,0 C0.084,0.61 0.071,0.709 0.1,0.8 0.128,0.89 0.374,1 1,1")
 
 import { useRouter } from 'next/router'
+import { useRef, useEffect, useState } from 'react'
 
 export default function Home() {
   const route = useRouter().route;
+  const bgRef = useRef([]);
+  const titleRef = useRef([]);
+  const descRef = useRef();
+  useEffect(() => {
+    const tl = gsap.timeline()
+    if (bgRef.current) {
+      tl.fromTo(bgRef.current, 2, {backgroundSize: 'auto 110%'}, {backgroundSize: 'auto 100%', ease: 'expo.out'})
+    }
+    if (titleRef.current) {
+      tl.fromTo(titleRef.current[0], 0.5, {opacity: 0}, {opacity: 1}, "-=1.9")
+      tl.fromTo(titleRef.current[1], 0.5, {opacity: 0}, {opacity: 1}, "-=1.6")
+      tl.fromTo(titleRef.current[2], 0.5, {opacity: 0}, {opacity: 1}, "-=1.3")
+    }
+    if (descRef.current) {
+      tl.fromTo(descRef.current, 0.75, {opacity: 0}, {opacity: 1}, '-=1')
+    }
+    return () => {
+      if (tl) {
+        tl.kill()
+      }
+    }
+  }, []);
   return (
-    <Style.PageContainer>
-      <Grid />
+    <Style.PageContainer ref={bgRef}>
+      {/* <div style={{ width: '100px', height: '100px', background: 'red' }}></div> */}
+      <Grid  animate={true} />
       <Style.ScotchContainer>
-        <Scotch orientation={'left'} />
-        <Scotch orientation={'right'} />
+        <Scotch animate={true} orientation={'left'} />
+        <Scotch animate={true} orientation={'right'} />
       </Style.ScotchContainer>
       <Style.ContentContainer>
-        <Header route={route} />
+        <Header animate={true} route={route} />
         <Style.Content>
-          <Line />
-          <Title className="title"><span className='red'>The</span> <span style={{ whiteSpace: 'nowrap' }}>Yemen crisis</span></Title>
-          <p>A historical and humanitarian overview.</p>
+          <Line className="line" animate={true} />
+          <Title className="title">
+            <span className="red word">
+              <span ref={el => titleRef.current[0] = el}>The</span>
+            </span> <span className="red word">
+              <span ref={el => titleRef.current[1] = el}>Yemen</span>
+            </span> <span className="word">
+              <span ref={el => titleRef.current[2] = el} style={{ whiteSpace: 'nowrap' }}>tribute</span>
+            </span>
+          </Title>
+          <p ref={descRef}>A historical and humanitarian overview commemorating the Yemeni dead.</p>
           <Style.ListLink>
-            <LinkPage href="/article">Read the article</LinkPage>
-            <LinkPage href="/map">Explore the map</LinkPage>
+            <LinkPage animate={true} href="/article">Read the article</LinkPage>
+            <LinkPage animate={true} href="/map">Explore the map</LinkPage>
           </Style.ListLink>
         </Style.Content>
-        <Credit />
-      </Style.ContentContainer>
+        <Credit animate={true} />
+      </Style.ContentContainer> 
     </Style.PageContainer>
   )
 }

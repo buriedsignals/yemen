@@ -6,8 +6,10 @@ export const PageContainer = styled.div`
   min-width: 100vw;
   min-height: 100vh;
   background-image: url(img/bg-landing.jpg);
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
+  background-repeat: no-repeat;
+}
   .gridContainer {
     .item {
       background: #000;
@@ -57,12 +59,17 @@ export const ContentContainer = styled.div`
 `
 
 export const Content = styled.div`
-  max-width: 622px;
+  max-width: 630px;    
+  margin-top: 26px;
   ${down('md')} {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 100%;    
+    margin-top: 0;
     padding: 0 28px;
+  }
+  .line {
+    transform-origin: top left;
   }
   .title {
     ${down('md')} {

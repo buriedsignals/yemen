@@ -7,9 +7,10 @@ const Image = ({
   srcSet,
   sizes,
   dangerouslySetInnerHTML,
+  ...pros
 }) => {
   return (
-    <figure>
+    <figure {...pros}>
       <div>
         <img
           width={width}

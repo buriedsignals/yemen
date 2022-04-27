@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: calc(100% - 52px);
-  z-index: 10;
+  z-index: 11;
   ${down('md')} {
     top: 14px; left: 14px;
     width: calc(100% - 28px);

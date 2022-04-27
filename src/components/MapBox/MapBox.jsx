@@ -51,7 +51,7 @@ export default function MapBox() {
         return
       }
       const feature = features[0]
-      feature.properties.media_url = "https://www.youtube.com/embed/Buq0poVzSZU"
+      // feature.properties.media_url = "https://www.youtube.com/embed/Buq0poVzSZU"
       useStore.setState({
         openPopup: true,
         popupProperties: feature.properties,

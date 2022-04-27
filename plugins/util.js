@@ -262,7 +262,7 @@ function generateFeed({ posts = [], metadata = {} }) {
   const { homepage = '' } = config
 
   const feed = new RSS({
-    title: metadata.title || 'Ukraine Conflict Monitor',
+    title: metadata.title || 'The Yemen Tribute',
     description: metadata.description,
     site_url: homepage,
     feed_url: `${homepage}/feed.xml`,

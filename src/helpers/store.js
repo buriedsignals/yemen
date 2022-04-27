@@ -5,6 +5,7 @@ const useStore = create((set) => {
     router: {},
     dom: null,
     mapFilterDate: 'All',
+    openChapters: false,
     openPopup: false,
     popupProperties: {
       date: "",

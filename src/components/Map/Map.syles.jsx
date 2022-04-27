@@ -1,6 +1,43 @@
 import { colorBlack, colorRed, colorWhite } from '@/helpers/styles'
 import { down } from 'styled-breakpoints'
 import styled from 'styled-components'
+let scotchsStyleDesktop = {
+  size: '',
+  repeat: '',
+  image: '',
+  position: ''
+} 
+let scotchsStyleMobile = {
+  size: '',
+  repeat: '',
+  image: '',
+  position: ''
+} 
+let scotchsDatas = [
+  {
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '0' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '0' }
+  },
+  {
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '20vh' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '6vh' }
+  },
+]
+for(let i=0; i < scotchsDatas.length; i++) {
+  const image = 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 18.75%, rgba(255, 255, 255, 0.08) 40.1%, rgba(255, 255, 255, 0.08) 100%)'
+  const sizeDesktop = scotchsDatas[i].desktop.w + ' ' + scotchsDatas[i].desktop.h;
+  const positionDesktop = scotchsDatas[i].desktop.px + ' ' + scotchsDatas[i].desktop.py;
+  const sizeMobile = scotchsDatas[i].mobile.w + ' ' + scotchsDatas[i].mobile.h;
+  const positionMobile = scotchsDatas[i].mobile.px + ' ' + scotchsDatas[i].mobile.py;
+  scotchsStyleDesktop.size += ', ' + sizeDesktop;
+  scotchsStyleDesktop.repeat +=', no-repeat';
+  scotchsStyleDesktop.image += ', ' + image;
+  scotchsStyleDesktop.position += ', ' + positionDesktop;
+  scotchsStyleMobile.size += ', ' + sizeMobile;
+  scotchsStyleMobile.repeat +=', no-repeat';
+  scotchsStyleMobile.image += ', ' + image;
+  scotchsStyleMobile.position += ', ' + positionMobile;
+}
 
 export const MapContainer = styled.div`
   display: inline-flex;
@@ -9,6 +46,26 @@ export const MapContainer = styled.div`
     display: flex;
     flex-direction: column;
     height: auto;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: 20vw 33.33vh, 20vw 33.33vh${ scotchsStyleDesktop.size };
+    background-repeat: repeat, repeat${ scotchsStyleDesktop.repeat };
+    background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleDesktop.image };
+    background-position: top left, top left${ scotchsStyleDesktop.position };
+    pointer-events: none;
+    z-index: 12;
+    ${down('md')} {
+      background-size: 33.33vw 20vh, 33.33vw 20vh${ scotchsStyleMobile.size };
+      background-repeat: repeat, repeat${ scotchsStyleMobile.repeat };
+      background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleMobile.image };
+      background-position: top left, top left${ scotchsStyleMobile.position };
+    }
   }
 `
 
@@ -206,6 +263,12 @@ export const PopupContainer = styled.div`
         width: 87px;
         margin: 12.5px auto 25px;
       }
+    }
+  }
+  figure.media {
+    height: auto !important;
+    ${down('md')} {
+      height: auto !important;
     }
   }
   .media {

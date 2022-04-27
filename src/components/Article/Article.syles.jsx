@@ -2,6 +2,85 @@ import { colorBlack, colorGrey, colorRed, colorWhite } from '@/helpers/styles'
 import { down } from 'styled-breakpoints'
 import styled from 'styled-components'
 
+
+let scotchsStyleDesktop = {
+  size: '',
+  repeat: '',
+  image: '',
+  position: ''
+} 
+let scotchsStyleMobile = {
+  size: '',
+  repeat: '',
+  image: '',
+  position: ''
+} 
+let scotchsDatas = [
+  {
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '0' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '0' }
+  },
+  {
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '20vh' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '6vh' }
+  },
+  {
+    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '926px' },
+    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '1366px' }
+  },
+  {
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '3176px' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '7536px' }
+  },
+  {
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '3506px' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '7786px' }
+  },
+  {
+    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '4506px' },
+    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '8786px' }
+  },
+  {
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '6506px' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '10786px' }
+  },
+  {
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '7506px' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '11786px' }
+  },
+  {
+    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '9506px' },
+    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '13786px' }
+  },
+  {
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '11506px' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '15786px' }
+  },
+  {
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '12506px' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '16786px' }
+  },
+  {
+    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '13506px' },
+    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '17786px' }
+  },
+]
+for(let i=0; i < scotchsDatas.length; i++) {
+  const image = 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 18.75%, rgba(255, 255, 255, 0.08) 40.1%, rgba(255, 255, 255, 0.08) 100%)'
+  const sizeDesktop = scotchsDatas[i].desktop.w + ' ' + scotchsDatas[i].desktop.h;
+  const positionDesktop = scotchsDatas[i].desktop.px + ' ' + scotchsDatas[i].desktop.py;
+  const sizeMobile = scotchsDatas[i].mobile.w + ' ' + scotchsDatas[i].mobile.h;
+  const positionMobile = scotchsDatas[i].mobile.px + ' ' + scotchsDatas[i].mobile.py;
+  scotchsStyleDesktop.size += ', ' + sizeDesktop;
+  scotchsStyleDesktop.repeat +=', no-repeat';
+  scotchsStyleDesktop.image += ', ' + image;
+  scotchsStyleDesktop.position += ', ' + positionDesktop;
+  scotchsStyleMobile.size += ', ' + sizeMobile;
+  scotchsStyleMobile.repeat +=', no-repeat';
+  scotchsStyleMobile.image += ', ' + image;
+  scotchsStyleMobile.position += ', ' + positionMobile;
+}
+
 export const ArticleContainer = styled.div`
   position: relative;
   width: 100vw;
@@ -9,6 +88,18 @@ export const ArticleContainer = styled.div`
   margin-bottom: 60px;
   padding-bottom: 170px;
   background: ${colorBlack};
+  background-size: 20vw 33.33vh, 20vw 33.33vh${ scotchsStyleDesktop.size };
+  background-repeat: repeat, repeat${ scotchsStyleDesktop.repeat };
+  background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleDesktop.image };
+  background-position: top left, top left${ scotchsStyleDesktop.position };
+  // pointer-events: none;
+  z-index: 12;
+  ${down('md')} {
+    background-size: 33.33vw 20vh, 33.33vw 20vh${ scotchsStyleMobile.size };
+    background-repeat: repeat, repeat${ scotchsStyleMobile.repeat };
+    background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleMobile.image };
+    background-position: top left, top left${ scotchsStyleMobile.position };
+  }
   .gridContainer {
     .item {
       background: #000;
@@ -49,6 +140,19 @@ export const ContentContainer = styled.div`
 `
 
 export const Content = styled.div`
+  .fullWidth {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    margin-top: 50px;
+    overflow: hidden;
+    div {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 100%;
+      transform: translate3D(-50%, -50%, 0);
+    }
+  }
 `
 
 export const SectionHero = styled.div`
@@ -128,6 +232,26 @@ export const Background = styled.div`
     height: 43.125vh;
     background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 33.33%, rgba(0,0,0,0.5) 33.33%, rgba(0,0,0,0.5) 66.66%, rgba(0,0,0,0.6) 66.66%, rgba(0,0,0,0.6) 100%), url(img/bg-article.jpg);
   }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: 20vw 33.33vh, 20vw 33.33vh${ scotchsStyleDesktop.size };
+    background-repeat: repeat, repeat${ scotchsStyleDesktop.repeat };
+    background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleDesktop.image };
+    background-position: top left, top left${ scotchsStyleDesktop.position };
+    pointer-events: none;
+    z-index: 12;
+    ${down('md')} {
+      background-size: 33.33vw 20vh, 33.33vw 20vh${ scotchsStyleMobile.size };
+      background-repeat: repeat, repeat${ scotchsStyleMobile.repeat };
+      background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleMobile.image };
+      background-position: top left, top left${ scotchsStyleMobile.position };
+    }
+  }
 `
 
 export const SectionStories = styled.div`
@@ -147,12 +271,31 @@ export const SectionStories = styled.div`
     text-align: center;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    ${down('md')} {
+      width: 100%;
+      padding: 0 28px;
+      font-size: 12px;
+      line-height: 181%;
+    }
   }
   ul {
     display: flex;
     justify-content: center;
+    ${down('md')} {
+      flex-direction: column;
+      padding: 0 28px;
+    }
+    li {
+      ${down('md')} {
+        margin-right: 0 !important;
+        padding: 0 26px;
+      }
+    }
     li:not(:last-child) {
       margin-right: 30px;
+      ${down('md')} {
+        margin-bottom: 12px;
+      }
     }
   }
 `
@@ -164,12 +307,20 @@ export const ButtonStory = styled.a`
   width: 195px;
   height: 55px;
   border: 1px solid rgba(229,229,229,0.2);
+  ${down('md')} {
+    width: 245px;
+    height: 68px;
+  }
   div {
     display: flex;
     align-items: center;
     figure {
       width: 53px;
       height: 53px;
+      ${down('md')} {
+        width: 68px;
+        height: 68px;
+      }
     }
     p {
       padding-left: 10px;
@@ -179,6 +330,9 @@ export const ButtonStory = styled.a`
       line-height: 94.5%;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      ${down('md')} {
+        font-size: 25px;
+      }
       span {
         display: block;
       }
@@ -208,6 +362,16 @@ export const SectionIntro = styled.div`
     margin: 0 auto;
     padding-left: 28px;
     padding-right: 28px;
+    ${down('md')} {
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .title {
+    display: flex;
+    gap: 30px;
+    padding-left: 28px;
   }
   h2 {
     color: ${colorWhite};
@@ -216,11 +380,25 @@ export const SectionIntro = styled.div`
     line-height: 94.5%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    ${down('md')} {
+      font-size: 40px;
+    }
   }
   .line {
     width: 250.6px;
     height: 3px;
     margin-top: 35px;
+    ${down('md')} {
+      width: 50vw;
+      margin-top: 28px;
+    }
+  }
+  .desc {
+    ${down('md')} {
+      width: 100%;
+      padding-left: 28px;
+      padding-right: 28px;
+    }
   }
   .listIntroContainer {
     position: relative;
@@ -248,12 +426,24 @@ export const SectionIntro = styled.div`
         // margin-left: 175px;
         transform: translate3D(-100%,-50%,0);
         z-index: 0;
+        ${down('md')} {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          margin-top: 20px;
+          transform: inherit;
+        }
       }
     }
   }
 `
 export const DescriptionContainer = styled.div`
   width: 500px;
+  ${down('md')} {
+    width: 100%;
+  }
   p {
     color: ${colorWhite};
     font-family: 'Inter';
@@ -261,9 +451,20 @@ export const DescriptionContainer = styled.div`
     font-weight: 400;
     font-size: 16px;
     line-height: 140.5%;
-    opacity: 0.8;
+    // opacity: 0.8;
     &:not(:last-child) {
       margin-bottom: 20px;
+      ${down('md')} {
+        margin-bottom: 35px;
+      }
+    }
+    &.legend {
+      ${down('md')} {
+        max-width: 85%;
+        margin: 0 auto;
+        font-size: 14px;
+        text-align: center;
+      }
     }
     &.subtitle {
       margin-bottom: 30px;
@@ -274,6 +475,10 @@ export const DescriptionContainer = styled.div`
       line-height: 140.5%;
       letter-spacing: 0.18em;
       text-transform: uppercase;
+      ${down('md')} {
+        width: 80%;
+        line-height: 181.5%;
+      }
     }
   }
   a {
@@ -287,8 +492,15 @@ export const ListNumber = styled.ol`
   z-index: 1;
   li {
     color: ${colorWhite};
+    ${down('md')} {
+      width: 85%;
+    }
     &.liHybrid {
       position: relative;
+      ${down('md')} {
+        width: 100%;
+        overflow: hidden;
+      }
       figure {
         position: relative;
         top: 0;
@@ -297,6 +509,32 @@ export const ListNumber = styled.ol`
         width: 100vw;
         height: auto;
         transform: inherit;
+        ${down('md')} {
+          width: auto;
+          height: 75vh;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(6,13,0,0.25) 50%, rgba(6,13,0,1) 100%);
+          }
+        }
+        & > div {
+          ${down('md')} {
+            height: 100%;
+          }
+          img {
+            ${down('md')} {
+              width: auto;
+              max-width: inherit;
+              height: 100%;
+            }
+          }
+        }
       }
       .subsubliContainer {
         position: absolute;
@@ -305,28 +543,64 @@ export const ListNumber = styled.ol`
       }
       .subliContainer {
         margin-bottom: 45px;
+        ${down('md')} {
+          margin-bottom: 0;
+        }
       }
     }
     &:nth-child(4n + 1) {
       .liContainer {
         margin-left: 36px;
+        ${down('md')} {
+          margin-left: 0;
+        }
       }
     }
-    &:nth-child(4n + 2) .liContainer {
-      margin-left: 455px;
-    }
+    &:nth-child(4n + 2) {
+      ${down('md')} {
+        margin-left: 40px;
+      }
+      .liContainer {
+        margin-left: 455px;
+        ${down('md')} {
+          margin-left: 0px;
+        }
+      }
+    } 
     &:nth-child(4n + 3) .liContainer {
       margin-left: 250px;
+      ${down('md')} {
+        margin-left: 0px;
+      }
       .itemContainer > div {
         width: 283px;
+        ${down('md')} {
+          width: 100%;
+        }
       }
     }
-    &:nth-child(4n + 4) .liContainer {
-      margin-left: 455px;
-    }
-    &:not(:last-child) .liContainer {
-      margin-bottom: 72px;
-    }
+    &:nth-child(4n + 4) {
+      ${down('md')} {
+        margin-left: 40px;
+      }
+      .liContainer {
+        margin-left: 455px;
+        ${down('md')} {
+          margin-left: 0px;
+        }
+      }
+    } 
+    &:not(:last-child) {
+      ${down('md')} {
+        margin-bottom: 42px;
+      }
+      .liContainer {
+        margin-bottom: 72px;
+        ${down('md')} {
+          margin-bottom: 0;
+        }
+      }
+    } 
     span {
       position: relative;
       display: inline-block;
@@ -336,6 +610,10 @@ export const ListNumber = styled.ol`
       line-height: 0.8;
       letter-spacing: 0.03em;
       text-transform: uppercase;
+      ${down('md')} {
+        font-size: 30px;
+        margin-bottom: 11px;
+      }
       &::after {
         content: '';
         position: absolute;
@@ -352,6 +630,9 @@ export const ListNumber = styled.ol`
 
 export const Section = styled.div`
   padding-top: 108px;
+  ${down('md')} {
+    padding-top: 95px;
+  }
   .space {
     height: 120px;
   }
@@ -360,10 +641,30 @@ export const Section = styled.div`
     align-items: flex-end;
     margin-left: 187px;
     margin-bottom: 100px;
+    ${down('md')} {
+      margin-left: 0;
+      padding-left: 28px;
+      margin-bottom: 42px;
+      overflow: hidden;
+    }
     &.center {
       align-items: center;
       margin-left: 0;
+      ${down('md')} {
+        margin-left: 0;
+        padding-left: 0;
+        margin-bottom: 42px;
+        overflow: hidden;
+      }
+      h2 {
+        ${down('md')} {
+          white-space: nowrap;
+        }
+      }
       .line {
+        ${down('md')} {
+          min-width: inherit;
+        }
         &:first-child {
           margin-left: 0;
           margin-right: 35px;
@@ -382,21 +683,33 @@ export const Section = styled.div`
       letter-spacing: 0.03em;
       text-transform: uppercase;
       white-space: nowrap;
-      span {
+      ${down('md')} {
+        font-size: 40px;
+        line-height: 94.5%;
+        white-space: inherit;
+      }
+      .red {
         color: ${colorRed};
+        ${down('md')} {
+          white-space: nowrap;
+        }
       }
     }
     .line {
       width: 100%;
       height: 3px;
       margin-left: 35px;
+      ${down('md')} {
+        min-width: 50vw;
+        margin-left: 30px;
+      }
     }
   }
   .helping {
     max-width: 500px;
     margin: 0 auto;
     p {
-      margin-bottom: 60px;
+      margin-bottom: 60px !important;
       color: ${colorWhite};
       font-family: 'Inter';
       font-style: normal;
@@ -423,6 +736,10 @@ export const Section = styled.div`
   }
   .map-raids {
     margin: 80px 0;
+    ${down('md')} {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
     figure {
       margin-bottom: 20px;
     }
@@ -431,31 +748,79 @@ export const Section = styled.div`
     }
     a {
       margin-top: 50px;
+      ${down('md')} {
+        margin-top: 30px;
+      }
     }
   }
   .map-legend {
     position: relative;
     margin-bottom: 80px;
-    .legend {
+    ${down('md')} {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    figure {
+      ${down('md')} {
+        margin-top: 30px;
+      }
+    }
+    & > .legend {
       position: absolute;
       bottom: 0;
       right: 0;
       width: 290px;
+      ${down('md')} {
+        position: relative;
+        width: 100%;
+      }
       z-index: 2;
+      p.legend {
+        ${down('md')} {
+          order: 3;    
+          margin-bottom: 0;
+        }
+      }
+      .fatalities {
+        ${down('md')} {
+          font-size: 14px;
+          text-align: center;
+          order: 1;
+          margin-bottom: 10px;
+        }
+      }
       & > div {
         width: 100%;
+        ${down('md')} {
+          display: flex;
+          flex-direction: column;
+        }
       }
       .mesure {
         position: relative;
+        ${down('md')} {
+          order: 2;
+          width: 50%;
+          margin: 0 auto 35px;
+          p {
+            font-size: 14px;
+          }
+        }
         .colors {
           width: 100%;
           height: 17.5px;
           background: linear-gradient(90deg, #FFF1F1 0%, #430707 100%);
+          ${down('md')} {
+            height: 7.5px;
+          }
         }
         p {
           position: absolute;
           bottom: calc(-100% - 7.5px);
           margin: 0;
+          ${down('md')} {
+            bottom: calc(-100% - 15px);
+          }
           &:first-child {
             left: 0;
             transform: translate3D(-50%, 0, 0);
@@ -478,23 +843,54 @@ export const Section = styled.div`
           width: 500px;
           margin-left: 460px;
           padding-left: 50px;
+          ${down('md')} {
+            width: 100%;
+            margin-left: 0px;
+            margin-bottom: 35px;
+            padding-left: 0px;
+          }
         }
-        &:nth-child(2) {
+        &:nth-child(2) > div {
+          position: relative;
           width: 275px;
           margin-left: 85px;
-          margin-bottom: 430px;
+          // margin-bottom: 430px;
+          z-index: 2;
+          ${down('md')} {
+            width: 100%;
+            margin-left: 0px;
+            margin-bottom: 35px;
+            padding-left: 0px;
+          }
         }
         &:last-child {
           width: 500px;
           margin-left: 460px;
           padding-left: 50px;
+          ${down('md')} {
+            width: 100%;
+            margin-left: 0px;
+            margin-bottom: 35px;
+            padding-left: 0px;
+          }
         }
       }
     }
-    figure {
-      position: absolute;
-      top: 50%;
-      transform: translate3D(0, -50%, 0);
+    .descMap {
+      figure {
+        width: 100%;
+        position: relative;
+        top: 0;
+        margin-top: -50px;
+        ${down('md')} {
+          margin: 40px 0 !important;
+        }
+        div {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
   }
   &.division {
@@ -503,9 +899,30 @@ export const Section = styled.div`
     }
   }
   &.action {
+    .helping {
+      ${down('md')} {
+        text-align: center !important;
+      }
+    }
     .container > div {
       margin: 0 auto;
       text-align: center;
+      ${down('md')} {
+        text-align: left;
+      }
+      & > p {
+        max-width: 761px;
+        margin: 0 auto;
+      }
+    }
+    h2 {
+      ${down('md')} {
+        text-align: center;
+        white-space: inherit !important;
+        span {
+          white-space: nowrap;
+        }
+      }
     }
     .container > figure {
       margin: 32px auto 0;
@@ -516,6 +933,10 @@ export const Section = styled.div`
         height: 1px;
         margin: 80px auto 100px;
         background: ${colorWhite};
+        ${down('md')} {
+          width: 85%;
+          margin: 60px auto 75px;
+        }
       }
     }
   }
@@ -525,14 +946,28 @@ export const DateContainer = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  ${down('md')} {
+    flex-direction: column;
+    gap: inherit;
+  }
   & > div {
     position: relative;
     width: 50%;
+    ${down('md')} {
+      width: 100%;
+    }
     figure {
       position: absolute;
       top: 50%;
       width: 391px;
       transform: translate3D(0, -50%, 0);
+      ${down('md')} {
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin-bottom: 35px;
+        transform: inherit;
+      }
       figcaption {
         max-width: 85%;
         margin: 0 auto;
@@ -544,15 +979,31 @@ export const DateContainer = styled.div`
         font-size: 16px;
         line-height: 140.5%;
         text-align: center;
+        // opacity: 0.8;
+        ${down('md')} {
+          font-size: 14px;
+          padding-top: 20px;
+        }
       }
     }
   }
   .youtube  {
+    ${down('md')} {
+      padding-top: 30px;
+    }
     iframe {
       position: absolute;
       top: 50%;
       width: 100% !important;
+      height: calc(449px / 1.7777777778);
       transform: translate3D(0, -50%, 0);
+      ${down('md')} {
+        position: relative;
+        top: 0;
+        width: 100% !important;
+        height: calc((100vw - 56px) / 1.7777777778);
+        transform: inherit;
+      }
     }
   }
 `
@@ -567,6 +1018,25 @@ export const Date = styled.div`
   letter-spacing: 0.12em;
   text-transform: uppercase;
   transform: translate3D(-50%, -50%, 0);
+  ${down('md')} {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 35px;
+    font-size: 35px;
+    transform: inherit;
+  }
+  &::before {
+    content: '';
+    display: none;
+    width: 3px;
+    height: auto;
+    margin-right: 20px;
+    background-color: ${colorRed};
+    ${down('md')} {
+      display: block;
+    }
+  }
   &::after {
     content: '';
     display: block;
@@ -574,6 +1044,9 @@ export const Date = styled.div`
     height: auto;
     margin-left: 20px;
     background-color: ${colorRed};
+    ${down('md')} {
+      display: none;
+    }
   }
 `
 export const Quote = styled.figure`
@@ -587,12 +1060,17 @@ export const Quote = styled.figure`
   text-align: center;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  ${down('md')} {
+    margin: 100px auto;
+    font-size: 18px;
+    text-align: left;
+  }
   blockquote {
     p {
       color: ${colorWhite};
-      span {
-        opacity: 0.4;
-      }
+      // span {
+      //   opacity: 0.4;
+      // }
     }
   }
   figcaption {

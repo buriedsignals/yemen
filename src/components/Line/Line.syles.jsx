@@ -6,6 +6,7 @@ export const LineContainer = styled.div`
   width: 165px;
   height: 5px;
   background: linear-gradient(90deg, ${colorRed} 15%, ${colorWhite} 15%);
+  // transform-origin: top left;
   ${down('md')} {
     height: 2px;
   }

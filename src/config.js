@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
-const title = 'Ukraine Conflict Monitor'
+const title = 'The Yemen Tribute'
 const url = 'https://ukraine-map.vercel.app/'
 const description =
-  'A dashboard using RSS, Twitter and Maps to monitor the war in Ukraine'
+  'A historical and humanitarian overview commemorating the Yemeni dead.'
 const author = 'Buried Signals'
 
 const Header = () => {

@@ -83,11 +83,14 @@ export const Popup = ({ ...props }) => {
 
   const selectMedia = () => {
     let media = <></>
-    const media_format = media_url.split('.').pop()
-    if (media_format == 'gif' || media_format == 'jpg' || media_format == 'png' || media_format == 'webp') {
-      media = <Image className='media' src={media_url} />
-    } else {
-      media = <iframe className='media' src={media_url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+    console.log(media_url)
+    if (media_url) {
+      const media_format = media_url.split('.').pop()
+      if (media_format == 'gif' || media_format == 'jpg' || media_format == 'png' || media_format == 'webp') {
+        media = <Image className='media' src={media_url} />
+      } else {
+        media = <iframe className='media' src={`https://www.youtube.com/embed/${media_url}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      }
     }
     return media
   }
@@ -124,7 +127,7 @@ export const Popup = ({ ...props }) => {
           </div>
         </div>
         <div className="description">
-          <p>{ description }</p>
+          <p dangerouslySetInnerHTML={{__html: description}} />
         </div>
         <a className="link" href={ source_url }>Link to the source</a>
       </div>

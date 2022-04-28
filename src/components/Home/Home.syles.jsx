@@ -96,13 +96,18 @@ export const ListLink = styled.div`
   padding-top: 43px;
   ${down('md')} {
     flex-direction: column;
-    padding-top: 70px;
+    padding-top: 60px;
+  }
+  a {
+    ${down('md')} {
+      max-width: 130px;
+    }
   }
   a:first-child {
     margin-right: 100px;
     ${down('md')} {
       margin-right: 0;
-      margin-bottom: 18px;
+      margin-bottom: 30px;
     }
   }
 `

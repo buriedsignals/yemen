@@ -17,6 +17,17 @@ import { useEffect, useRef } from 'react';
 import useStore from '@/helpers/store'
 import IconFacebook from '../icons/IconFacebook';
 import IconTwitter from '../icons/IconTwitter';
+import { ThemeProvider } from 'styled-components'
+
+const theme = {
+  breakpoints: {
+    sm: '576px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
+    xxxl: '1920px',
+  },
+};
 
 export const ButtonStory = ({ srcImg, altImg, firstname, surname, ...props }) => {
   return <Style.ButtonStory {...props}>
@@ -30,7 +41,6 @@ export const ButtonStory = ({ srcImg, altImg, firstname, surname, ...props }) =>
 
 export const Section = ({ children, ...props }) => {
   const sectionRef = useRef();
-  console.log(useStore.getState().summary)
 
   useEffect(() => {
     ScrollTrigger.create({
@@ -76,6 +86,7 @@ export default function Article() {
   const route = useRouter().route;  
 
   return (
+  <ThemeProvider theme={theme}>
     <Style.ArticleContainer>
       <Style.Background />
       <Style.ContentContainer>
@@ -101,13 +112,13 @@ export default function Article() {
             <h3>Stories of 3 yemenis what is like to be in their shoes</h3>
             <ul>
               <li>
-                <ButtonStory href="/story/ofra_haza" srcImg="/img/img-portrait-ofra-haza.jpg" altImg="Portrait de Ofra Haza" firstname="Ofra" surname="Haza" />
+                <ButtonStory href="/story/ofra_haza" srcImg="/img/img-portrait-ofra-haza.png" altImg="Portrait de Ofra Haza" firstname="Ofra" surname="Haza" />
               </li>
               <li>
-                <ButtonStory href="" srcImg="/img/img-portrait-muhammad-al-gharsi.jpg" altImg="Portrait de Muhammad Al-Gharsi" firstname="Muhammad" surname="Al-Gharsi" />
+                <ButtonStory href="/story/ofra_haza" srcImg="/img/img-portrait-muhammad-al-gharsi.jpg" altImg="Portrait de Muhammad Al-Gharsi" firstname="Muhammad" surname="Al-Gharsi" />
               </li>
               <li>
-                <ButtonStory href="" srcImg="/img/img-portrait-al-kindi.jpg" altImg="Portrait de Al Kindi" firstname="Al" surname="Kindi" />
+                <ButtonStory href="/story/ofra_haza" srcImg="/img/img-portrait-al-kindi.jpg" altImg="Portrait de Al Kindi" firstname="Al" surname="Kindi" />
               </li>
             </ul>
           </Style.SectionStories> 
@@ -295,7 +306,16 @@ export default function Article() {
               </div>
             </Style.Section> 
           </Section>  
-          <Image className="fullWidth" src="/img/img-yemen-landscape.jpg" alt="Photo of Yemen" />
+          <div className="fullWidth-container">
+            <Image className="fullWidth" src="/img/img-yemen-landscape.jpg" alt="Photo of Yemen" />
+            <div className="desc-container">
+              <div className="lorem-container">
+                <Style.DescriptionContainer>
+                  <p>Lorem ipsum</p>
+                </Style.DescriptionContainer>
+              </div>
+            </div>
+          </div>
           <Section id="section4" data-index="4">   
             <Style.Section className='players'>
               <div className="title center">
@@ -309,7 +329,7 @@ export default function Article() {
                     <Style.DescriptionContainer>
                       <p className='subtitle'>1- Houthi/Ansarullah (Partisans of God):</p>
                       <p>The Houthis are just another name for the Zaidis of Yemen, adopted in 2004 when the Yemeni army and air force supported by Saudi Arabia suppressed a rebellion started in the Saada (the Houthis heartland) which killed “Hussien al-Houthi”, who died a martyr since he was representing his district in a struggle to recognize economic marginalization by Ali Abdullah Saleh who was making diplomatic concessions to the Saudis.</p>
-                    </Style.DescriptionContainer>
+                    {/* </Style.DescriptionContainer>
                     <div className="descMap">
                       <Style.DescriptionContainer>
                         <p>Légende if légende is needed of course, otherwise on peut just delete ce paragraphe</p>
@@ -317,7 +337,7 @@ export default function Article() {
                       </Style.DescriptionContainer>
                       <Image src="/img/img-map-yemen.png" alt="Map of Yemen" />
                     </div>
-                    <Style.DescriptionContainer>
+                    <Style.DescriptionContainer> */}
                       <p>Politicians have described the Houthis as “a revivalist movement” backed by Tehran as a part of the Saudi-Iran Cold War [8] and the majority of Western media has been pushing the same narrative, however history has shown us that the Zaydis have existed in Northern Yemen for over a millenium - so it’s difficult to argue for any kind of “revival”. The Zaydis are yet again refusing to bend the knee, the Ottoman infidel label has simply evolved to the American classification of terrorrist organisation. It is important to note that the Houthis are resident Zaydi Shiite Muslims, who have significant differences in their doctrine and beliefs from the Shiites who govern Iran.</p>
                       <p>From an article by Bruce Riedel from the Brookings Institution on February 2, 2022:</p>
                     </Style.DescriptionContainer>
@@ -347,7 +367,16 @@ export default function Article() {
               </div>
             </Style.Section> 
           </Section>  
+          <div className="fullWidth-container">
           <Image className="fullWidth" src="/img/img-yemen-market.jpg" alt="Photo of Yemen market" />
+            <div className="desc-container">
+              <div className="lorem-container">
+                <Style.DescriptionContainer>
+                  <p>Lorem ipsum</p>
+                </Style.DescriptionContainer>
+              </div>
+            </div>
+          </div>
           <Section id="section5" data-index="5">  
             <Style.Section className='impacts'>
               <div className="title center">
@@ -429,5 +458,6 @@ export default function Article() {
         <Summary />
       </Style.ContentContainer>
     </Style.ArticleContainer>
+  </ThemeProvider>
   )
 }

@@ -20,6 +20,16 @@ export const MapContainer = styled.div`
     padding: inherit;
     background-color: inherit;
     box-shadow: inherit;
+    .marker {
+      width: 5px;
+      height: 5px;
+      background: #ffffff;
+      border: 2px solid #ff0000;
+      border-radius: 70px;
+    }
+    .mapboxgl-popup-close-button {
+      display: none;
+    }
     .icon {
       position: relative;
       width: 50px;

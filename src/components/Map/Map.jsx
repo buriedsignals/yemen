@@ -8,24 +8,9 @@ import useStore from '@/helpers/store'
 import IconPin from '../icons/IconPin';
 import * as Style from './Map.syles'
 import Image from '../image/image';
-import YouTube from 'react-youtube';
-
-/*
-  CSV
-  - date : dd-mm-yyyy | type : Text | default :  | exemple : 19-04-2022
-  - description : text | type : Text | default :  | exemple : Description
-  - fatalities : number | type : Number | default :  | exemple : 0
-  - injuries : number | type : Number | default :  | exemple : 0
-  - longitude : number | type : Number | default :  | exemple : 0
-  - latitude : number | type : Number | default :  | exemple : 0
-  - main_image_url : url | type : Text | default :  | exemple : https://www.google.fr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
-  - main_video_url : url | type : Text | default :  | exemple : https://www.youtube.com/embed/Buq0poVzSZU
-  - more_images_url = url, url, url | type : Text | default :  | exemple : https://www.google.fr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png, https://www.google.fr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png, https://www.google.fr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
-  - source_url : url | type : Text | default :  | exemple : https://www.google.fr/
-  - title : text | type : Text | default :  | exemple : Thamar Prison - Thamar
-  - years : yyyy | type : Number | default :  | exemple : 2022
-
-*/
+import { down } from 'styled-breakpoints';
+import { useBreakpoint } from 'styled-breakpoints/react-styled';
+import IconArrow from '../icons/IconArrow';
 
 export const FilterSlider = ({ ...props }) => {
   const slides = Array.from({ length: 8 }).map(
@@ -53,8 +38,6 @@ export const FilterSlider = ({ ...props }) => {
           }}
           onClick={(swiper, e) => {
             swiper.slideTo(e.target.dataset.swiperSlideIndex)
-            
-      console.log('ok')
           }}
         >
           {slides.map((slideContent, index) => (
@@ -82,8 +65,8 @@ export const Popup = ({ ...props }) => {
     ])
 
   const selectMedia = () => {
+    
     let media = <></>
-    console.log(media_url)
     if (media_url) {
       const media_format = media_url.split('.').pop()
       if (media_format == 'gif' || media_format == 'jpg' || media_format == 'png' || media_format == 'webp') {
@@ -102,7 +85,7 @@ export const Popup = ({ ...props }) => {
           useStore.setState({
             openPopup: false,
           })
-        }} >Back to map</button>
+        }} ><span>Back to map</span></button>
       </div>
       <div className="main-container">
         <h2 className='title'>
@@ -131,6 +114,15 @@ export const Popup = ({ ...props }) => {
         </div>
         <a className="link" href={ source_url }>Link to the source</a>
       </div>
+      { useBreakpoint(down('md')) ? 
+          <button className='up' onClick={() => {
+            useStore.setState({
+              openPopup: false,
+            })
+          }}>
+            <IconArrow />
+          </button>
+        : '' }
     </Style.PopupContainer>
   )
 }

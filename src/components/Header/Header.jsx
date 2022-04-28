@@ -10,7 +10,9 @@ import gsap from 'gsap'
 
 export default function Header({animate = false, route = null, ...props}) {
   const headerRef = useRef(null);
-  const urlSocialShare = 'https://www.youtube.com/watch?v=AkyXDDXzPyw'
+  const textSocialShare = 'Stop The Blockade !'
+  const hashtagSocialShare = 'YemenCantWait'
+  const urlSocialShare = 'https://yemen.buriedsignals.com'
   useEffect(() => {
     if (animate) {
       const tl = gsap.timeline()
@@ -48,7 +50,7 @@ export default function Header({animate = false, route = null, ...props}) {
         <a className="socialItem" href={`https://www.facebook.com/sharer/sharer.php?p[url]=${urlSocialShare}`} target="_blank">
             <IconFacebook />
         </a>
-        <a className="socialItem" href={`https://twitter.com/intent/tweet?url=${urlSocialShare}`} target="_blank">
+        <a className="socialItem" href={`https://twitter.com/intent/tweet?text=${textSocialShare}&hashtags=${hashtagSocialShare}&url=${urlSocialShare}`} target="_blank">
             <IconTwitter />
         </a>
       </Style.SocialContainer>

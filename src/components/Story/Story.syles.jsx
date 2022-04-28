@@ -66,7 +66,7 @@ let scotchsDatas = [
   },
 ]
 for(let i=0; i < scotchsDatas.length; i++) {
-  const image = 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 18.75%, rgba(255, 255, 255, 0.08) 40.1%, rgba(255, 255, 255, 0.08) 100%)'
+  const image = 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 18.75%, rgba(255, 255, 255, 0.04) 40.1%, rgba(255, 255, 255, 0.01) 100%)'
   const sizeDesktop = scotchsDatas[i].desktop.w + ' ' + scotchsDatas[i].desktop.h;
   const positionDesktop = scotchsDatas[i].desktop.px + ' ' + scotchsDatas[i].desktop.py;
   const sizeMobile = scotchsDatas[i].mobile.w + ' ' + scotchsDatas[i].mobile.h;

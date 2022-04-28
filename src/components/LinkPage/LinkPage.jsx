@@ -22,7 +22,7 @@ export default function LinkPage({ animate = false, children, ...props }) {
   return (
     <Link {...props}>
       <Style.LinkPageContainer ref={linkRef} className="linkPage">
-        { children }
+       <span>{ children }</span>
       </Style.LinkPageContainer>
     </Link>
   )

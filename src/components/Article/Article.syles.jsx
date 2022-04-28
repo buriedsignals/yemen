@@ -1,87 +1,99 @@
 import { colorBlack, colorGrey, colorRed, colorWhite } from '@/helpers/styles'
-import { down } from 'styled-breakpoints'
 import styled from 'styled-components'
+import { up, down } from 'styled-breakpoints';
 
 
 let scotchsStyleDesktop = {
   size: '',
   repeat: '',
   image: '',
-  position: ''
+  position: '',
+  positionAnim: ''
 } 
 let scotchsStyleMobile = {
   size: '',
   repeat: '',
   image: '',
-  position: ''
+  position: '',
+  positionAnim: ''
 } 
 let scotchsDatas = [
   {
-    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '0' },
-    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '0' }
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '0', pya: '0' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '0', pya: '0' }
   },
   {
-    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '20vh' },
-    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '6vh' }
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '20vh', pya: '90vh' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '6vh', pya: '86vh' }
   },
   {
-    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '926px' },
-    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '1366px' }
+    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '926px', pya: '1026px' },
+    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '1366px', pya: '2366px' }
   },
   {
-    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '3176px' },
-    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '7536px' }
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '3176px', pya: '4176px' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '7536px', pya: '8536px' }
   },
   {
-    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '3506px' },
-    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '7786px' }
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '3506px', pya: '4506px' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '7786px', pya: '7536px' }
   },
   {
-    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '4506px' },
-    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '8786px' }
+    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '4506px', pya: '5506px' },
+    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '8786px', pya: '6786px' }
   },
   {
-    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '6506px' },
-    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '10786px' }
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '6506px', pya: '7506px' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '10786px', pya: '11786px' }
   },
   {
-    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '7506px' },
-    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '11786px' }
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '7506px', pya: '8786px' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '11786px', pya: '12786px' }
   },
   {
-    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '9506px' },
-    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '13786px' }
+    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '9506px', pya: '10506px' },
+    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '13786px', pya: '14786px' }
   },
   {
-    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '11506px' },
-    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '15786px' }
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '11506px', pya: '12506px' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '15786px', pya: '16786px' }
   },
   {
-    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '12506px' },
-    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '16786px' }
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '12506px', pya: '13506px' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '16786px', pya: '17786px' }
   },
   {
-    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '13506px' },
-    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '17786px' }
+    desktop: { w: '120px', h: '433px', px: 'calc(60vw - 60px)', py: '13506px', pya: '14506px' },
+    mobile: { w: '49px', h: '190px', px: 'calc(50vw - 52px)', py: '17786px', pya: '18786px' }
   },
 ]
 for(let i=0; i < scotchsDatas.length; i++) {
-  const image = 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 18.75%, rgba(255, 255, 255, 0.08) 40.1%, rgba(255, 255, 255, 0.08) 100%)'
+  const image = 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 18.75%, rgba(255, 255, 255, 0.04) 40.1%, rgba(255, 255, 255, 0.01) 100%)'
   const sizeDesktop = scotchsDatas[i].desktop.w + ' ' + scotchsDatas[i].desktop.h;
   const positionDesktop = scotchsDatas[i].desktop.px + ' ' + scotchsDatas[i].desktop.py;
+  const positionDesktopAnimation = scotchsDatas[i].desktop.px + ' ' + scotchsDatas[i].desktop.pya;
   const sizeMobile = scotchsDatas[i].mobile.w + ' ' + scotchsDatas[i].mobile.h;
   const positionMobile = scotchsDatas[i].mobile.px + ' ' + scotchsDatas[i].mobile.py;
+  const positionMobileAnimation = scotchsDatas[i].mobile.px + ' ' + scotchsDatas[i].mobile.pya;
   scotchsStyleDesktop.size += ', ' + sizeDesktop;
   scotchsStyleDesktop.repeat +=', no-repeat';
   scotchsStyleDesktop.image += ', ' + image;
   scotchsStyleDesktop.position += ', ' + positionDesktop;
+  scotchsStyleDesktop.positionAnim += ', ' + positionDesktopAnimation;
   scotchsStyleMobile.size += ', ' + sizeMobile;
   scotchsStyleMobile.repeat +=', no-repeat';
   scotchsStyleMobile.image += ', ' + image;
   scotchsStyleMobile.position += ', ' + positionMobile;
+  scotchsStyleMobile.positionAnim += ', ' + positionMobileAnimation;
 }
 
 export const ArticleContainer = styled.div`
+  @keyframes moveArticle {
+    50% {background-position: top left, top left${ scotchsStyleDesktop.positionAnim };}
+  }
+  @keyframes moveArticleMobile {
+    50% {background-position: top left, top left${ scotchsStyleMobile.positionAnim };}
+  }
   position: relative;
   width: 100vw;
   min-height: 100vh;
@@ -92,6 +104,7 @@ export const ArticleContainer = styled.div`
   background-repeat: repeat, repeat${ scotchsStyleDesktop.repeat };
   background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleDesktop.image };
   background-position: top left, top left${ scotchsStyleDesktop.position };
+  animation: moveArticle 3s infinite;
   // pointer-events: none;
   z-index: 12;
   ${down('md')} {
@@ -99,6 +112,7 @@ export const ArticleContainer = styled.div`
     background-repeat: repeat, repeat${ scotchsStyleMobile.repeat };
     background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleMobile.image };
     background-position: top left, top left${ scotchsStyleMobile.position };
+    // animation: moveArticleMobile 90s infinite;
   }
   .gridContainer {
     .item {
@@ -140,17 +154,51 @@ export const ContentContainer = styled.div`
 `
 
 export const Content = styled.div`
-  .fullWidth {
+  .fullWidth-container {
     position: relative;
-    width: 100%;
-    height: 75vh;
     margin-top: 50px;
-    overflow: hidden;
-    div {
-      position: absolute;
-      top: 50%; left: 50%;
+    .fullWidth {
+      position: relative;
       width: 100%;
-      transform: translate3D(-50%, -50%, 0);
+      height: 75vh;
+      overflow: hidden;
+      ${down('md')} {
+        height: 35vh;
+      }
+      div {
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 100%;
+        transform: translate3D(-50%, -50%, 0);
+        ${down('md')} {
+          width: auto;
+          height: 100%;
+           img {
+            max-width: inherit;
+            width: auto;
+            height: 100%;
+           }
+        }
+      }
+    }
+    .desc-container {
+      position: absolute;
+      bottom: 50px; left: 0;
+      width: 100%;
+      .lorem-container {
+        display: flex;
+        justify-content: start;
+        max-width: calc(1060px - 56px) !important;
+        ${up('xxxl')} {
+          max-width: calc(65.21vw - 56px) !important;
+        }
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 28px;
+        & > div {
+          width: 35%;
+        }
+      }
     }
   }
 `
@@ -222,12 +270,18 @@ export const SectionHero = styled.div`
 `
 
 export const Background = styled.div`
+  @keyframes moveArticle {
+    50% {background-position: top left, top left${ scotchsStyleDesktop.positionAnim };}
+  }
+  @keyframes moveArticleMobile {
+    50% {background-position: top left, top left${ scotchsStyleMobile.positionAnim };}
+  }
   position: absolute;
   width: 100vw;
   height: 50vh;
   background-image: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 20%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0.7) 100%), url(img/bg-article.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center, top center;
   ${down('md')} {
     height: 43.125vh;
     background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 33.33%, rgba(0,0,0,0.5) 33.33%, rgba(0,0,0,0.5) 66.66%, rgba(0,0,0,0.6) 66.66%, rgba(0,0,0,0.6) 100%), url(img/bg-article.jpg);
@@ -243,6 +297,7 @@ export const Background = styled.div`
     background-repeat: repeat, repeat${ scotchsStyleDesktop.repeat };
     background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleDesktop.image };
     background-position: top left, top left${ scotchsStyleDesktop.position };
+    animation: moveArticle 30s infinite;
     pointer-events: none;
     z-index: 12;
     ${down('md')} {
@@ -250,6 +305,7 @@ export const Background = styled.div`
       background-repeat: repeat, repeat${ scotchsStyleMobile.repeat };
       background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleMobile.image };
       background-position: top left, top left${ scotchsStyleMobile.position };
+      animation: moveArticleMobile 90s infinite;
     }
   }
 `
@@ -277,6 +333,9 @@ export const SectionStories = styled.div`
       font-size: 12px;
       line-height: 181%;
     }
+    ${up('xxxl')} {
+      margin: 60px 0 40px;
+    }
   }
   ul {
     display: flex;
@@ -291,10 +350,14 @@ export const SectionStories = styled.div`
         padding: 0 26px;
       }
     }
+    }
     li:not(:last-child) {
       margin-right: 30px;
       ${down('md')} {
         margin-bottom: 12px;
+      }
+      ${up('xxxl')} {
+        margin-right: 150px;
       }
     }
   }
@@ -307,19 +370,43 @@ export const ButtonStory = styled.a`
   width: 195px;
   height: 55px;
   border: 1px solid rgba(229,229,229,0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   ${down('md')} {
     width: 245px;
     height: 68px;
+  }
+  ${up('xxxl')} {
+    width: 310px;
+    height: 115px;
   }
   div {
     display: flex;
     align-items: center;
     figure {
+      position: relative;
+      overflow: hidden;
       width: 53px;
       height: 53px;
       ${down('md')} {
         width: 68px;
         height: 68px;
+      }
+      ${up('xxxl')} {
+        width: 115px;
+        height: 115px;
+      }
+      & > div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 115px;
+        transform: translate3d(-50%, -50%, 0);
+        img {
+          max-width: inherit;
+          width: auto;
+          height: 100%;
+        }
       }
     }
     p {
@@ -330,8 +417,12 @@ export const ButtonStory = styled.a`
       line-height: 94.5%;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       ${down('md')} {
         font-size: 25px;
+      }
+      ${up('xxxl')} {
+        font-size: 29px;
       }
       span {
         display: block;
@@ -340,6 +431,7 @@ export const ButtonStory = styled.a`
   }
   svg {
     margin-right: 10px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
   &:hover {
     border: 1px solid ${colorWhite};
@@ -362,6 +454,9 @@ export const SectionIntro = styled.div`
     margin: 0 auto;
     padding-left: 28px;
     padding-right: 28px;
+    ${up('xxxl')} {
+      max-width: calc(65.21vw - 56px) !important;
+    }
     ${down('md')} {
       flex-direction: column;
       padding-left: 0;
@@ -409,6 +504,9 @@ export const SectionIntro = styled.div`
         margin: 0 auto;
         padding-left: 28px;
         padding-right: 28px;
+        ${up('xxxl')} {
+          max-width: calc(65.21vw - 56px) !important;
+        }
       }
       .liContainer {
         position: relative;
@@ -540,6 +638,9 @@ export const ListNumber = styled.ol`
         position: absolute;
         bottom: 0;
         left: 0;
+        ${up('xxxl')} {
+          left: 15.5vw;
+        }
       }
       .subliContainer {
         margin-bottom: 45px;
@@ -647,6 +748,10 @@ export const Section = styled.div`
       margin-bottom: 42px;
       overflow: hidden;
     }
+    ${up('xxxl')} {
+      max-width: calc(65.21vw - 56px) !important;
+      margin: 0 auto 100px;
+    }
     &.center {
       align-items: center;
       margin-left: 0;
@@ -655,6 +760,10 @@ export const Section = styled.div`
         padding-left: 0;
         margin-bottom: 42px;
         overflow: hidden;
+      }
+      ${up('xxxl')} {
+        max-width: calc(65.21vw - 56px) !important;
+        margin: 0 auto 100px;
       }
       h2 {
         ${down('md')} {
@@ -731,6 +840,9 @@ export const Section = styled.div`
   }
   .container {
     max-width: calc(1060px - 56px) !important;
+    ${up('xxxl')} {
+      max-width: calc(65.21vw - 56px) !important;
+    }
     margin: 0 auto;
     padding: 0 28px;
   }
@@ -748,8 +860,10 @@ export const Section = styled.div`
     }
     a {
       margin-top: 50px;
+      max-width: 155px;
       ${down('md')} {
         margin-top: 30px;
+        max-width: 130px;
       }
     }
   }

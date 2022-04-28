@@ -5,34 +5,38 @@ let scotchsStyleDesktop = {
   size: '',
   repeat: '',
   image: '',
-  position: ''
+  position: '',
+  positionAnim: ''
 } 
 let scotchsStyleMobile = {
   size: '',
   repeat: '',
   image: '',
-  position: ''
+  position: '',
+  positionAnim: ''
 } 
 let scotchsDatas = [
   {
-    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '0' },
-    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '0' }
+    desktop: { w: '120px', h: '424px', px: 'calc(20vw - 60px)', py: '0', pya: '-90vh' },
+    mobile: { w: '49px', h: '180px', px: 'calc(33.33vw - 52px)', py: '0', pya: '-86vh' }
   },
   {
-    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '20vh' },
-    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '6vh' }
+    desktop: { w: '130px', h: '670px', px: 'calc(80vw - 65px)', py: '20vh', pya: '90vh' },
+    mobile: { w: '53px', h: '278px', px: 'calc(66.66vw - 26.5px)', py: '6vh', pya: '86vh' }
   },
 ]
 for(let i=0; i < scotchsDatas.length; i++) {
-  const image = 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 18.75%, rgba(255, 255, 255, 0.08) 40.1%, rgba(255, 255, 255, 0.08) 100%)'
+  const image = 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 18.75%, rgba(255, 255, 255, 0.04) 40.1%, rgba(255, 255, 255, 0.01) 100%)'
   const sizeDesktop = scotchsDatas[i].desktop.w + ' ' + scotchsDatas[i].desktop.h;
   const positionDesktop = scotchsDatas[i].desktop.px + ' ' + scotchsDatas[i].desktop.py;
+  const positionDesktopAnimation = scotchsDatas[i].desktop.px + ' ' + scotchsDatas[i].desktop.pya;
   const sizeMobile = scotchsDatas[i].mobile.w + ' ' + scotchsDatas[i].mobile.h;
   const positionMobile = scotchsDatas[i].mobile.px + ' ' + scotchsDatas[i].mobile.py;
   scotchsStyleDesktop.size += ', ' + sizeDesktop;
   scotchsStyleDesktop.repeat +=', no-repeat';
   scotchsStyleDesktop.image += ', ' + image;
   scotchsStyleDesktop.position += ', ' + positionDesktop;
+  scotchsStyleDesktop.positionAnim += ', ' + positionDesktopAnimation;
   scotchsStyleMobile.size += ', ' + sizeMobile;
   scotchsStyleMobile.repeat +=', no-repeat';
   scotchsStyleMobile.image += ', ' + image;
@@ -40,12 +44,20 @@ for(let i=0; i < scotchsDatas.length; i++) {
 }
 
 export const MapContainer = styled.div`
+  @keyframes move {
+    0% {opacity: 0; background-position: top left, top left${ scotchsStyleDesktop.positionAnim };}
+    100% {opacity: 1; background-position: top left, top left${ scotchsStyleDesktop.position };}
+  }
+  @keyframes moveMobile {
+    0% {opacity: 0; background-position: top left, top left${ scotchsStyleMobile.positionAnim };}
+    100% {opacity: 1; background-position: top left, top left${ scotchsStyleMobile.position };}
+  }
   display: inline-flex;
   height: 100vh;
   ${down('md')} {
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 100%;
   }
   &::after {
     content: '';
@@ -58,6 +70,7 @@ export const MapContainer = styled.div`
     background-repeat: repeat, repeat${ scotchsStyleDesktop.repeat };
     background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleDesktop.image };
     background-position: top left, top left${ scotchsStyleDesktop.position };
+    animation: move 5s cubic-bezier(0.16, 1, 0.3, 1) 1;
     pointer-events: none;
     z-index: 12;
     ${down('md')} {
@@ -65,6 +78,7 @@ export const MapContainer = styled.div`
       background-repeat: repeat, repeat${ scotchsStyleMobile.repeat };
       background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleMobile.image };
       background-position: top left, top left${ scotchsStyleMobile.position };
+      animation: moveMobile 5s cubic-bezier(0.16, 1, 0.3, 1) 1;
     }
   }
 `
@@ -167,8 +181,8 @@ export const PageContainer = styled.div`
 export const PopupContainer = styled.div`
   position: relative;
   width: 40vw;  
-  background: ${colorBlack};
-  overflow: scroll;
+  background: #242424;
+  overflow-y: scroll;
   z-index: 2;
   ${down('md')} {
     order: 2;
@@ -179,14 +193,17 @@ export const PopupContainer = styled.div`
   .header {
     display: flex;
     justify-content: flex-end;
-    margin: 26px 26px 58px 0;
+    margin: 34px 26px 58px 0;
     ${down('md')} {
       justify-content: center;
       margin: 46px 0 36px;
     }
     button {
+      position: relative;
       display: flex;
       align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
       color: ${colorWhite};
       font-family: "Nata-ExtraBlack";
       font-size: 20px;
@@ -194,17 +211,30 @@ export const PopupContainer = styled.div`
       letter-spacing: 0.12em;
       text-transform: uppercase;
       ${down('md')} {
-        font-size: 12px;
+        padding: 7.5px 15px;
+        font-size: 20px;
+        border: ${colorWhite} solid 1px;
+      }
+      span {
+        z-index: 2;
       }
       &::after {
         content: '';
+        position: absolute;
+        right: 0;
         display: block;
         width: 3px;
         height: 30px;
-        margin-left: 12px;
         background: ${colorRed};
+        z-index: 1;
+        transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         ${down('md')} {
           display: none;
+        }
+      }
+      &:hover {
+        &::after {
+          width: 100%;
         }
       }
     }
@@ -226,6 +256,7 @@ export const PopupContainer = styled.div`
     text-align: center;
     ${down('md')} {
       font-size: 12px;
+      line-height: 1.5;
       margin: 0 auto 12.5px;
     }
     svg {
@@ -360,6 +391,14 @@ export const PopupContainer = styled.div`
     opacity: 0.8;
     ${down('md')} {
       font-size: 14px;
+    }
+  }
+  .up {
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    svg {
+      transform: rotate3D(0,0,1,-90deg);
     }
   }
 `

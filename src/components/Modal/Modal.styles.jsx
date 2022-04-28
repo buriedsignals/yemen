@@ -7,6 +7,8 @@ export const ButtonContainer = styled.div`
 `
 
 export const PanelContainer = styled.div`
+position: relative;
+z-index: 3;
 `
 
 export const PanelCross = styled.div`

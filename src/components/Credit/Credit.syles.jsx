@@ -16,7 +16,7 @@ export const CreditContainer = styled.div`
     background: ${colorBlack};
     ${down('md')} {
       width: 100vw;
-      height: 30vh;
+      height: fit-content;
     }
   }
   .panelCross {

@@ -44,23 +44,53 @@ export default function MapBox() {
     )
 
     map.current.on('click', (event) => {
+      setTimeout(() => {
+      map.current.resize();
+      }, 0)
       const features = map.current.queryRenderedFeatures(event.point, {
         layers: ['yemen'],
       })
       if (!features.length) {
+        useStore.setState({
+          openPopup: false
+        })
+        map.current.resize();
         return
       }
       const feature = features[0]
-      // feature.properties.media_url = "https://www.youtube.com/embed/Buq0poVzSZU"
+      const coordinates = feature.geometry.coordinates.slice();
+      while (Math.abs(event.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += event.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+      const popup = new mapboxgl.Popup({
+        anchor: 'top-left',
+        offset: [-((feature.layer.paint['circle-radius'] * 2.75) / 2), -((feature.layer.paint['circle-radius'] * 2.75) / 2)],
+      })
+        .setLngLat(coordinates)
+        .setHTML(
+          `
+            <div class="marker" style="width: ${ feature.layer.paint['circle-radius'] * 2.75 }px; height: ${ feature.layer.paint['circle-radius'] * 2.75 }px"></div>
+          `
+        )
+        .addTo(map.current)
+
       useStore.setState({
         openPopup: true,
         popupProperties: feature.properties,
       })
       setTimeout(() => {
-        map.current.flyTo({center: feature.geometry.coordinates})
+        map.current.flyTo({center: coordinates})
       }, 0)
     })
   }, [])
+  useEffect(() => {
+    if (!useStore.getState().openPopup) {
+      const popup = document.getElementsByClassName('mapboxgl-popup');
+      if ( popup.length ) {
+          popup[0].remove();
+      }
+    }
+  }, [useStore.getState().openPopup])
   return (
     <>
       <Style.MapContainer

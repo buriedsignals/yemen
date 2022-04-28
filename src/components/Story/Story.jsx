@@ -17,7 +17,7 @@ const datas = {
       'This essay puts a historical lens on the current crisis to give a different outlook on the current narrative. Yemen is a very old country with a rich history, full of foreign invasions being foiled by stubborn local resistance.',
       'But first, a few memorable historical facts:'
     ],
-    image: '../img/img-portrait-ofra-haza.jpg'
+    image: '../img/img-portrait-ofra-haza.png'
   }
 }
 

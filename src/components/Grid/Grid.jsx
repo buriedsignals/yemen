@@ -8,7 +8,8 @@ export const Item = ({animate = false, index, ...props}) => {
     if (animate) {
       const tl = gsap.timeline()
       if (itemRef.current) {
-        tl.fromTo(itemRef.current, 2, {opacity: 0 }, {opacity: 0.25 + (index % 5 / 10)})
+        const i = window.innerWidth >= 992 ? 5 : 3
+        tl.fromTo(itemRef.current, 2, {opacity: 0 }, {opacity: 0.25 + (index % i / 10)})
       }
       return () => {
         if (tl) {

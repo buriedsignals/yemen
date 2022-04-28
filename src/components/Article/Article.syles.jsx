@@ -88,6 +88,10 @@ for(let i=0; i < scotchsDatas.length; i++) {
 }
 
 export const ArticleContainer = styled.div`
+  @keyframes appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
   @keyframes moveArticle {
     50% {background-position: top left, top left${ scotchsStyleDesktop.positionAnim };}
   }
@@ -104,7 +108,7 @@ export const ArticleContainer = styled.div`
   background-repeat: repeat, repeat${ scotchsStyleDesktop.repeat };
   background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleDesktop.image };
   background-position: top left, top left${ scotchsStyleDesktop.position };
-  animation: moveArticle 3s infinite;
+  animation: moveArticle 3s infinite, appear 1.5s 1;
   // pointer-events: none;
   z-index: 12;
   ${down('md')} {
@@ -112,7 +116,7 @@ export const ArticleContainer = styled.div`
     background-repeat: repeat, repeat${ scotchsStyleMobile.repeat };
     background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleMobile.image };
     background-position: top left, top left${ scotchsStyleMobile.position };
-    // animation: moveArticleMobile 90s infinite;
+    animation: moveArticleMobile 90s infinite, appear 1.5s 1;
   }
   .gridContainer {
     .item {

@@ -14,6 +14,7 @@ const ease = CustomEase.create("custom", "M0,0 C0.084,0.61 0.071,0.709 0.1,0.8 0
 
 import { useRouter } from 'next/router'
 import { useRef, useEffect, useState } from 'react'
+import Image from '../image/image'
 
 export default function Home() {
   const route = useRouter().route;
@@ -23,7 +24,7 @@ export default function Home() {
   useEffect(() => {
     const tl = gsap.timeline()
     if (bgRef.current) {
-      tl.fromTo(bgRef.current, 2, {backgroundSize: 'auto 110%'}, {backgroundSize: 'auto 100%', ease: 'expo.out'})
+      tl.fromTo(bgRef.current, 2, {scaleX: 1.1, scaleY: 1.1}, {scaleX: 1, scaleY: 1, ease: 'expo.out'})
     }
     if (titleRef.current) {
       tl.fromTo(titleRef.current[0], 0.5, {opacity: 0}, {opacity: 1}, "-=1.9")
@@ -40,8 +41,10 @@ export default function Home() {
     }
   }, []);
   return (
-    <Style.PageContainer ref={bgRef}>
-      {/* <div style={{ width: '100px', height: '100px', background: 'red' }}></div> */}
+    <Style.PageContainer>
+      <div className='bg'>
+        <Image ref={bgRef} src='img/bg-landing.jpg' alt='Photo Yemen' />
+      </div>
       <Grid  animate={true} />
       <Style.ScotchContainer>
         <Scotch animate={true} orientation={'left'} />

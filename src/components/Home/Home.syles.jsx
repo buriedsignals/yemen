@@ -3,13 +3,44 @@ import { down } from 'styled-breakpoints'
 import { colorWhite } from '@/helpers/styles'
 
 export const PageContainer = styled.div`
+  @keyframes appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url(img/bg-landing.jpg);
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  // background-image: url(img/bg-landing.jpg);
+  // background-size: auto 100%;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  animation: appear 1.5s 1;
+  .bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    figure {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: auto;
+      transform: translate3D(-50%, -50%, 0);
+      ${down('lg')} {
+        width: max-content;
+        height: 100%;
+        & > div {
+          width: auto;
+          height: 100%;
+          img {
+            max-width: initial;
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
   .gridContainer {
     .item {
       background: #000;

@@ -44,6 +44,10 @@ for(let i=0; i < scotchsDatas.length; i++) {
 }
 
 export const MapContainer = styled.div`
+  @keyframes appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
   @keyframes move {
     0% {opacity: 0; background-position: top left, top left${ scotchsStyleDesktop.positionAnim };}
     100% {opacity: 1; background-position: top left, top left${ scotchsStyleDesktop.position };}
@@ -54,6 +58,7 @@ export const MapContainer = styled.div`
   }
   display: inline-flex;
   height: 100vh;
+  animation: appear 1.5s 1;
   ${down('md')} {
     display: flex;
     flex-direction: column;

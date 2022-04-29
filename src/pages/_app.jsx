@@ -7,7 +7,7 @@ import Head from 'next/head'
 const title = 'The Yemen Tribute'
 const url = 'https://yemen.buriedsignals.com/'
 const description =
-  'A historical and humanitarian overview commemorating the Yemeni dead.'
+  'A historical and humanitarian overview commemorating the Yemeni fallen.'
 const author = 'Buried Signals'
 
 function Layout({ children }) {

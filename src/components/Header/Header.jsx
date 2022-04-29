@@ -29,7 +29,7 @@ export default function Header({animate = false, route = null, ...props}) {
   return (
     <Style.HeaderContainer ref={headerRef} {...props} className={ route == "/article" && 'isArticle' }>
       { route == "/" ? 
-        <Link href='/'>
+        <Link href='https://buriedsignals.com' target="_blank" rel="noreferrer">
           <Style.LinkLogoContainer>
             <IconLogo />
             <Style.TextLogoContainer>
@@ -46,7 +46,7 @@ export default function Header({animate = false, route = null, ...props}) {
               <LinkPage href="/article">Go back to the article</LinkPage>
       }
       <Style.SocialContainer className="socialContainer">
-        { route == "/article" &&  <LinkPage href='https://chng.it/YSz8sBy8hg' target="_blank">Stop the blockage</LinkPage> }
+        { route == "/article" &&  <LinkPage href='https://chng.it/YSz8sBy8hg' target="_blank">Stop the blockade</LinkPage> }
         <a className="socialItem" href={`https://www.facebook.com/sharer/sharer.php?p[url]=${urlSocialShare}`} target="_blank">
             <IconFacebook />
         </a>

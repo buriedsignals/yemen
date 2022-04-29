@@ -95,7 +95,7 @@ export default function Article() {
           <Style.SectionHero>
             <Title><span className="red">The Yemen</span> crisis in historical context</Title>
             <div className="moreMobil">
-              <p>5 minutes read</p>
+              <p>9 minute read</p>
               <p>Share :</p>
               <div className="socials">
                 <a className="socialItem" href='' target="_blank">
@@ -314,7 +314,7 @@ export default function Article() {
             <div className="desc-container">
               <div className="lorem-container">
                 <Style.DescriptionContainer>
-                  <p>Lorem ipsum</p>
+                  <p>Haraz Mountains, Rodd Waddington</p>
                 </Style.DescriptionContainer>
               </div>
             </div>
@@ -375,7 +375,7 @@ export default function Article() {
             <div className="desc-container">
               <div className="lorem-container">
                 <Style.DescriptionContainer>
-                  <p>Lorem ipsum</p>
+                  <p>Sana'a Market, Rodd Waddington</p>
                 </Style.DescriptionContainer>
               </div>
             </div>
@@ -423,8 +423,8 @@ export default function Article() {
                     <p>In addition to which AP reporters have proven that thousands of families are not receiving international food aid because shipments have been seized by the Houthis or the coalition.</p>
                     <p>In Sep 2021, the head of the UN food agency announced that 16 million Yemenis “are marching towards starvation”, he added that lack of funding may lead to the death of hundreds of thousands of children.</p>
                     <p>According to UNOCHA the situation in Yemen in 2022 is expected to worsen, with more than 20.7 million person in need of humanitarian assistance, and the funding coverage required to reach 16 million person is 3.9 billion dollars, the same funding required last year but unfortunately 57% of this funduing was secured.</p>
-                  </Style.DescriptionContainer>
-                  <Style.DescriptionContainer>
+                    <br />
+                    <br />
                     <p className='subtitle'>Current Truce</p>
                     <p>The current cease-fire provides hope for the reduction of violence. Abd Rabbu Mansour Hadi, Yemen’s exiled president has said he would transfer power to an eight-member presidential council, suggesting progress in ending the war. All of this comes on the heels of a new Yemen War Powers Resolution — announced by Reps. Pramila Jayapal, D-Wash., and Peter DeFazio, D-Ore. — to end U.S. involvement in the war. <a href="https://theintercept.com/2022/04/09/deconstructed-yemen-war-cease-fire-truce/"  target="_blank">[12]</a></p>
                   </Style.DescriptionContainer>

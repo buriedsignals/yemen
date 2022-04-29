@@ -63,7 +63,7 @@ export default function Home() {
               <span ref={el => titleRef.current[2] = el} style={{ whiteSpace: 'nowrap' }}>tribute</span>
             </span>
           </Title>
-          <p ref={descRef}>A historical and humanitarian overview commemorating the Yemeni dead.</p>
+          <p ref={descRef}>A historical and humanitarian overview commemorating the Yemeni fallen.</p>
           <Style.ListLink>
             <LinkPage animate={true} href="/article">Read the article</LinkPage>
             <LinkPage animate={true} href="/map">Explore the map</LinkPage>

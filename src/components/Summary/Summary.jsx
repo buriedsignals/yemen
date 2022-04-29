@@ -43,7 +43,7 @@ export default function Summary() {
             })
           }
         </div>
-        <Style.ReadInfo>5 minutes read</Style.ReadInfo>
+        <Style.ReadInfo>9 minute read</Style.ReadInfo>
       </div>
       <div className="mobileView">
         { 

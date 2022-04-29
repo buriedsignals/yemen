@@ -19,7 +19,7 @@ export const FilterSlider = ({ ...props }) => {
   slides.push('All')
   return (
     <Style.FilterSliderContainer>
-      <p className='title'>Filter by years</p>
+      <p className='title'>Filter by year</p>
       <Style.SliderContainer>
         <Swiper
           spaceBetween={0}

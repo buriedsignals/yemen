@@ -109,16 +109,16 @@ export default function Article() {
             <Line />
           </Style.SectionHero>
           <Style.SectionStories>
-            <h3>Stories of 3 yemenis what is like to be in their shoes</h3>
+            <h3>Yemeni Stories</h3>
             <ul>
               <li>
-                <ButtonStory href="/story/ofra_haza" srcImg="/img/img-portrait-ofra-haza.png" altImg="Portrait de Ofra Haza" firstname="Ofra" surname="Haza" />
+                <ButtonStory href="/story/nada" srcImg="/img/img-portrait-ofra-haza.png" altImg="Portrait de Ofra Haza" firstname="Nada" />
               </li>
               <li>
-                <ButtonStory href="/story/ofra_haza" srcImg="/img/img-portrait-muhammad-al-gharsi.jpg" altImg="Portrait de Muhammad Al-Gharsi" firstname="Muhammad" surname="Al-Gharsi" />
+                <ButtonStory href="/story/bushra" srcImg="/img/img-portrait-muhammad-al-gharsi.jpg" altImg="Portrait de Muhammad Al-Gharsi" firstname="Bushra" />
               </li>
               <li>
-                <ButtonStory href="/story/ofra_haza" srcImg="/img/img-portrait-al-kindi.jpg" altImg="Portrait de Al Kindi" firstname="Al" surname="Kindi" />
+                <ButtonStory href="/story/sadam" srcImg="/img/img-portrait-al-kindi.jpg" altImg="Portrait de Al Kindi" firstname="Sadam" />
               </li>
             </ul>
           </Style.SectionStories> 
@@ -131,6 +131,9 @@ export default function Article() {
                 </div>
                 <Style.DescriptionContainer className='desc'>
                   <p>Yemen is a territory on the southern tip of the Arabian peninsula which 24 million people call home and which has been designated the world’s worst humanitarian crisis by the UN. Western media has been repeatedly blaming the Houthis, however few of these stories mention that the member countries of the UN Security Council (who are responsible for restoring peace in Yemen) have all sold weapons to Saudi Arabia. <a href=""  target="_blank">[1]</a></p>
+                  <p>
+                  The Yemen cease-fire which took effect in April is the first serious truce between the country’s warring parties in six years. The factions in Yemen agreed to a two-month truce proposed by the United Nations, it includes a stop to all attacks inside Yemen and outside its borders; the entry of fuel ships to a rebel-controlled port; and the resumption of some commercial flights at the international airport in Yemen’s capital, Sana’a <a href="https://www.nytimes.com/2022/04/02/world/middleeast/yemen-cease-fire.html"  target="_blank">[2]</a>.
+                  </p>
                   <p>This essay puts a historical lens on the current crisis to give a different outlook on the current narrative. Yemen is a very old country with a rich history, full of foreign invasions being foiled by stubborn local resistance.</p>
                   <p>But first, a few memorable historical facts:</p>
                 </Style.DescriptionContainer>
@@ -421,8 +424,12 @@ export default function Article() {
                     <p>In Sep 2021, the head of the UN food agency announced that 16 million Yemenis “are marching towards starvation”, he added that lack of funding may lead to the death of hundreds of thousands of children.</p>
                     <p>According to UNOCHA the situation in Yemen in 2022 is expected to worsen, with more than 20.7 million person in need of humanitarian assistance, and the funding coverage required to reach 16 million person is 3.9 billion dollars, the same funding required last year but unfortunately 57% of this funduing was secured.</p>
                   </Style.DescriptionContainer>
+                  <Style.DescriptionContainer>
+                    <p className='subtitle'>Current Truce</p>
+                    <p>The current cease-fire provides hope for the reduction of violence. Abd Rabbu Mansour Hadi, Yemen’s exiled president has said he would transfer power to an eight-member presidential council, suggesting progress in ending the war. All of this comes on the heels of a new Yemen War Powers Resolution — announced by Reps. Pramila Jayapal, D-Wash., and Peter DeFazio, D-Ore. — to end U.S. involvement in the war. <a href="https://theintercept.com/2022/04/09/deconstructed-yemen-war-cease-fire-truce/"  target="_blank">[12]</a></p>
+                  </Style.DescriptionContainer>
                   <div className='youtube'>
-                    <iframe className='media' src="https://www.youtube.com/embed/wgjOv7ExqnM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe className='media' src="https://www.youtube.com/embed/AkyXDDXzPyw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                   </div>
                 </Style.DateContainer>
               </div>

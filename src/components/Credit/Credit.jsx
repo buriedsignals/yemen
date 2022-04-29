@@ -29,13 +29,11 @@ export default function Credit({ animate = false }) {
           <Style.PanelCredit>
             <h3>Credits</h3>
             <ul>
-              <li>ALLON Levy</li>
-              <li>BACARD Hugo</li>
-              <li>BAKER Matthew</li>
-              <li>BALWE Chetan</li>
-              <li>BELAIR Luc</li>
-              <li>BERKOVICH Vladimir</li>
-              <li>BERTRAND Benoit</li>
+              <li>Tom Vaillant</li>
+              <li>Gregoire Ormieres</li>
+              <li>Remy Dumas</li>
+              <li>Hassan Saffiedine</li>
+              <li>Zeinab Saffiedine</li>
             </ul>
           </Style.PanelCredit>
         }

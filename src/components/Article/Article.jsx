@@ -112,13 +112,13 @@ export default function Article() {
             <h3>Yemeni Stories</h3>
             <ul>
               <li>
-                <ButtonStory href="/story/nada" srcImg="/img/img-portrait-ofra-haza.png" altImg="Portrait de Ofra Haza" firstname="Nada" />
+                <ButtonStory href="/story/nada" srcImg="/img/img-portrait-ofra-haza.png" altImg="Portrait of Nada" firstname="Nada" />
               </li>
               <li>
-                <ButtonStory href="/story/bushra" srcImg="/img/img-portrait-muhammad-al-gharsi.jpg" altImg="Portrait de Muhammad Al-Gharsi" firstname="Bushra" />
+                <ButtonStory href="/story/bushra" srcImg="/img/img-portrait-muhammad-al-gharsi.jpg" altImg="Portrait of Bushra" firstname="Bushra" />
               </li>
               <li>
-                <ButtonStory href="/story/sadam" srcImg="/img/img-portrait-al-kindi.jpg" altImg="Portrait de Al Kindi" firstname="Sadam" />
+                <ButtonStory href="/story/sadam" srcImg="/img/img-portrait-al-kindi.jpg" altImg="Portrait of Sadam" firstname="Sadam" />
               </li>
             </ul>
           </Style.SectionStories> 

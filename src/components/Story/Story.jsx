@@ -11,7 +11,7 @@ import Title from '../Title/Title';
 
 const datas = {
   'nada': {
-    title: ['Nada', 'story'],
+    title: ['Nada\'s', 'story'],
     description: [
       'Life was good. It had a smooth rhythm: after school, I would take my brother and my scooter to play in the neighborhood before going home to do my homework.',  
       'Then the war began.',   
@@ -29,24 +29,24 @@ const datas = {
     source: 'https://www.actionagainsthunger.org/story/living-through-yemens-war-nadas-story'
   },
   'bushra': {
-    title: ['Bushra', 'story'],
+    title: ['Bushra\'s', 'story'],
     description: [
       'Before the war I had a normal life. I went to school in my wheelchair. I had friends coming over and we used to chat, draw and sing in my room. I felt safe.',
       'After the war started I got displaced twice. It was three years ago when I was at school in Hodeida and an airstrike hit the neighbourhood of my school. Everyone was very scared and the school got damaged.',
       'We couldn’t go back to school for a week after that and even then there were more and more attacks in schools, so all schools in the area stopped operating. I started feeling very afraid.'
     ],
-    image: '../img/img-portrait-ofra-haza.png',
+    image: '../img/img-portrait-muhammad-al-gharsi.jpg',
     source: 'https://www.savethechildren.net/blog/yemen-six-years-war-six-stories-children'
   },
   'sadam': {
-    title: ['Sadam', 'story'],
+    title: ['Sadam\'s', 'story'],
     description: [
       'Before the war, I had a good life; we had our own house and I was going to school, I was playing with my friends, I was feeling safe. I used to play football. I enjoyed playing football the most.',
       'When the war started, my life was not the same. One day, I an airstrike hit the area where we were. My dad died instantly and I was injured in the leg. I had an operation but my leg was broken in four different places so after the operation I couldn’t walk properly, I had to be held by someone.',
       'Now I am not going to school because I recently had another operation in my leg and I am still recovering. I am really looking forward to going back to school when my leg is better.',
       'When I grow up, I want to become a doctor so I can help people who are sick and injured. I hope Yemen will become as it was before the war so I can go back to Al-Mokha.'
     ],
-    image: '../img/img-portrait-ofra-haza.png',
+    image: '../img/img-portrait-al-kindi.jpg',
     source: 'https://www.savethechildren.net/blog/yemen-six-years-war-six-stories-children'
   }
 }

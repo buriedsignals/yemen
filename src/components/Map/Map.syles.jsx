@@ -407,3 +407,25 @@ export const PopupContainer = styled.div`
     }
   }
 `
+
+export const TitleMap = styled.p`
+  position: fixed;
+  top: 30px;
+  width: 30%;
+  margin-bottom: 12px;
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  color: ${colorWhite};
+  ${down('md')} {
+    position: relative;
+    top: inherit;
+    width: 70%;
+    font-size: 13px;
+  }
+`

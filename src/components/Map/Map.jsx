@@ -19,6 +19,7 @@ export const FilterSlider = ({ ...props }) => {
   slides.push('All')
   return (
     <Style.FilterSliderContainer>
+      <Style.TitleMap>Civilian casualties from bombings and mines</Style.TitleMap>
       <p className='title'>Filter by year</p>
       <Style.SliderContainer>
         <Swiper

@@ -29,15 +29,13 @@ export default function Header({animate = false, route = null, ...props}) {
   return (
     <Style.HeaderContainer ref={headerRef} {...props} className={ route == "/article" && 'isArticle' }>
       { route == "/" ? 
-        <Link href='https://buriedsignals.com' target="_blank" rel="noreferrer">
-          <Style.LinkLogoContainer>
-            <IconLogo />
-            <Style.TextLogoContainer>
-              <p>Produced by</p>
-              <p>Buried Signals</p>
-            </Style.TextLogoContainer>
-          </Style.LinkLogoContainer>
-        </Link>
+        <Style.LinkLogoContainer href='https://buriedsignals.com' target="_blank" rel="noreferrer">
+          <IconLogo />
+          <Style.TextLogoContainer>
+            <p>Produced by</p>
+            <p>Buried Signals</p>
+          </Style.TextLogoContainer>
+        </Style.LinkLogoContainer>
         : route == "/article" ?
           <LinkPage href="/map">Explore the map</LinkPage>
           : route == "/map" ?
@@ -46,7 +44,7 @@ export default function Header({animate = false, route = null, ...props}) {
               <LinkPage href="/article">Go back to the article</LinkPage>
       }
       <Style.SocialContainer className="socialContainer">
-        { route == "/article" &&  <LinkPage href='https://chng.it/YSz8sBy8hg' target="_blank">Stop the blockade</LinkPage> }
+        { (route == "/article" || route == "/map") &&  <LinkPage href='https://chng.it/YSz8sBy8hg' target="_blank">Stop the blockade</LinkPage> }
         <a className="socialItem" href={`https://www.facebook.com/sharer/sharer.php?p[url]=${urlSocialShare}`} target="_blank">
             <IconFacebook />
         </a>

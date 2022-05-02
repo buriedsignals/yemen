@@ -88,7 +88,7 @@ export default function Summary() {
               }
             }><IconBurger /></button>
             <div>
-              <p>{title}</p>
+              <p>{chapters[indexChapter]}</p>
               <p>{ `${parseInt(indexChapter) + 1}/${anchors.length}` }</p>
             </div>
           </div>

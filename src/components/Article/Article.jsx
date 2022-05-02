@@ -304,12 +304,24 @@ export default function Article() {
                     <p className='darkest'>The coalition received military equipment and intelligence support from the US, UK and France <a href="https://www.bbc.com/news/world-middle-east-29319423"  target="_blank">[10]</a>, which have been put to use against civilians. All three countries are permanent members of the UN Security Council which is responsible for the welfare of Yemen and its people.</p>
                     <p className='darkest'>In May that year the Houthis formed an alliance with former president Ali Saleh. The coalition ended on the 4th December 2017 with Saleh’s murder after the Houthis accused him of treason when he decided to sideline them in a deal backed by the UAE. <a href="https://www.google.com/url?q=https://www.aljazeera.com/news/2017/12/4/how-did-yemens-houthi-saleh-alliance-collapse&sa=D&source=docs&ust=1651485348688037&usg=AOvVaw0QCHD5e7JTWiWiJbIZHzgg"  target="_blank">[11]</a></p>
                     <p className='darkest'>Why so much interest in Yemen?<a href="https://www.thenation.com/article/archive/yemen-isa-blumi-houthi/" target="_blank">Dr. Blumi</a> argues it is for the economic and geographical value of Yemen.</p>
-                    {/* MAKE THIS NEXT PARAGRAPH A QUOTE PLEASE */}
-                    <p>Yemen was one of the last untapped stores of cumulative wealth. The people of Yemen, who in World Bank statistics are very poor, are actually quite wealthy in terms of their resources, networks, infrastructure, and savings. War in the country undermines the capacity of the people’s ability to resist. Because of the considerable amounts of oil and gas wealth, both on land and off shore, as well as its agricultural potential and its fisheries—which have been largely untouched until now—Yemen is a prize waiting to be properly harnessed.</p>
-                    <p>
+                  </Style.DescriptionContainer>
+                </Style.DateContainer>
+                <Image className="halfWidth right" src="/img/img-meta.png" alt="" />
+                <Style.Quote>
+                  <blockquote>
+                    <p>“Yemen was one of the last untapped stores of cumulative wealth. The people of Yemen, who in World Bank statistics are very poor, are actually quite wealthy in terms of their resources, networks, infrastructure, and savings. War in the country undermines the capacity of the people’s ability to resist. Because of the considerable amounts of oil and gas wealth, both on land and off shore, as well as its agricultural potential and its fisheries—which have been largely untouched until now—Yemen is a prize waiting to be properly harnessed.”</p>
+                  </blockquote>
+                  <figcaption>
+                    <cite></cite>
+                  </figcaption>
+                </Style.Quote>
+                <Style.DateContainer>
+                  <Style.DescriptionContainer><p>
                     The geographical importance of Yemen has also played a key role in the struggle to control the territory. Its position on the Bab al-Mandab strait (“Gate of Tears”) is of crucial importance, separating Asia from Africa and connecting the Red Sea to the Gulf of Aden. According to the US Energy Information Administration, an estimated 6.2 billion barrels crude oil and other petroleum products flowed daily through the strait toward the US, EU, and Asia in 2018.  It is also an essential location for the Chinese “Belt and Road” initiative <a href="https://carnegieendowment.org/sada/84558"  target="_blank">[11]</a>.
                     </p>
                   </Style.DescriptionContainer>
+                  <div className="date-container">
+                  </div>
                 </Style.DateContainer>
               </div>
             </Style.Section> 

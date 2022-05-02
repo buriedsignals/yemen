@@ -158,6 +158,22 @@ export const ContentContainer = styled.div`
 `
 
 export const Content = styled.div`
+  .halfWidth {
+    display: flex;
+    margin: 40px 0;
+    &.left {
+      justify-content: flex-start;
+    }
+    &.center {
+      justify-content: space-around;
+    }
+    &.right {
+      justify-content: flex-end;
+    }
+    & > div {
+      width: 75%;
+    }
+  }
   .fullWidth-container {
     position: relative;
     margin-top: 50px;

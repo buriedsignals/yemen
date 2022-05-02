@@ -34,6 +34,10 @@ export default function Credit({ animate = false }) {
               <li>Remy Dumas</li>
               <li>Hassan Saffiedine</li>
               <li>Zeinab Saffiedine</li>
+              <br />
+              <li>WITH DATA FROM:</li>
+              <li>ACLED</li>
+              <li>Yemen Data Project</li>
             </ul>
           </Style.PanelCredit>
         }

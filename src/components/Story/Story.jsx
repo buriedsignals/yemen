@@ -25,7 +25,8 @@ const datas = {
       'Am I going to live?'
       
     ],
-    image: '../img/img-portrait-ofra-haza.png'
+    image: '../img/img-portrait-ofra-haza.png',
+    source: 'https://www.actionagainsthunger.org/story/living-through-yemens-war-nadas-story'
   },
   'bushra': {
     title: ['Bushra', 'story'],
@@ -34,7 +35,8 @@ const datas = {
       'After the war started I got displaced twice. It was three years ago when I was at school in Hodeida and an airstrike hit the neighbourhood of my school. Everyone was very scared and the school got damaged.',
       'We couldn’t go back to school for a week after that and even then there were more and more attacks in schools, so all schools in the area stopped operating. I started feeling very afraid.'
     ],
-    image: '../img/img-portrait-ofra-haza.png'
+    image: '../img/img-portrait-ofra-haza.png',
+    source: 'https://www.savethechildren.net/blog/yemen-six-years-war-six-stories-children'
   },
   'sadam': {
     title: ['Sadam', 'story'],
@@ -44,7 +46,8 @@ const datas = {
       'Now I am not going to school because I recently had another operation in my leg and I am still recovering. I am really looking forward to going back to school when my leg is better.',
       'When I grow up, I want to become a doctor so I can help people who are sick and injured. I hope Yemen will become as it was before the war so I can go back to Al-Mokha.'
     ],
-    image: '../img/img-portrait-ofra-haza.png'
+    image: '../img/img-portrait-ofra-haza.png',
+    source: 'https://www.savethechildren.net/blog/yemen-six-years-war-six-stories-children'
   }
 }
 

@@ -260,6 +260,8 @@ export default function Article() {
                     <p className='darkest'>So, what’s the purpose of this historical analysis? To confirm that the Yemenis have a very long history of dealing with brutal foreign invaders and the Zaidis have been a symbol of resistance for hundreds of years.</p>
                   </Style.DescriptionContainer>
                 </Style.DateContainer>
+                {/* IMAGE HERE */}
+                <Image className="halfWidth right" src="/img/img-yemen-old-map.jpg" alt="" />
               </div>
             </Style.Section> 
           </Section>  
@@ -303,16 +305,15 @@ export default function Article() {
                     <p className='darkest'>On 26 March 2015, a Saudi-led coalition consisting of the UAE, Bahrain, Morocco, Qatar, Sudan, Kuwait, Egypt, and Jordan initiated Operation Decisive Storm which aimed to defeat the Houthis and restore Hadi’s government. The invasion would reverse what the coalition believed to be growing Iranian influence in the region. A couple hours after the coalition was formed, the Obama administration released a statement stressing its support to the coalition and the establishment of a Joint Combined Planning Cell with Saudi Arabia, in addition to pledging logistical and intelligence assistance. <a href="https://obamawhitehouse.archives.gov/the-press-office/2015/03/25/statement-nsc-spokesperson-bernadette-meehan-situation-yemen"  target="_blank">[9]</a></p>
                     <p className='darkest'>The coalition received military equipment and intelligence support from the US, UK and France <a href="https://www.bbc.com/news/world-middle-east-29319423"  target="_blank">[10]</a>, which have been put to use against civilians. All three countries are permanent members of the UN Security Council which is responsible for the welfare of Yemen and its people.</p>
                     <p className='darkest'>In May that year the Houthis formed an alliance with former president Ali Saleh. The coalition ended on the 4th December 2017 with Saleh’s murder after the Houthis accused him of treason when he decided to sideline them in a deal backed by the UAE. <a href="https://www.google.com/url?q=https://www.aljazeera.com/news/2017/12/4/how-did-yemens-houthi-saleh-alliance-collapse&sa=D&source=docs&ust=1651485348688037&usg=AOvVaw0QCHD5e7JTWiWiJbIZHzgg"  target="_blank">[11]</a></p>
-                    <p className='darkest'>Why so much interest in Yemen?<a href="https://www.thenation.com/article/archive/yemen-isa-blumi-houthi/" target="_blank">Dr. Blumi</a> argues it is for the economic and geographical value of Yemen.</p>
+                    <p className='darkest'>Why so much interest in Yemen?</p>
                   </Style.DescriptionContainer>
                 </Style.DateContainer>
-                <Image className="halfWidth right" src="/img/img-meta.png" alt="" />
                 <Style.Quote>
                   <blockquote>
                     <p>“Yemen was one of the last untapped stores of cumulative wealth. The people of Yemen, who in World Bank statistics are very poor, are actually quite wealthy in terms of their resources, networks, infrastructure, and savings. War in the country undermines the capacity of the people’s ability to resist. Because of the considerable amounts of oil and gas wealth, both on land and off shore, as well as its agricultural potential and its fisheries—which have been largely untouched until now—Yemen is a prize waiting to be properly harnessed.”</p>
                   </blockquote>
                   <figcaption>
-                    <cite></cite>
+                  <cite>Dr. Isa Blumi <a href="https://www.thenation.com/article/archive/yemen-isa-blumi-houthi"  target="_blank">[Stockholm University]</a></cite>
                   </figcaption>
                 </Style.Quote>
                 <Style.DateContainer>
@@ -347,6 +348,8 @@ export default function Article() {
               <div className="container">
                 <div className="map-container">
                   <div>
+                    {/* IMAGE HERE */}
+                    <Image className="halfWidth right" src="/img/img-control-map.jpg" alt="" />
                     <Style.DescriptionContainer>
                       <p className='subtitle'>1- The Houthi/Ansarullah</p>
                       <p>The Houthis are just another name for the Zaidis of Yemen, adopted in 2004 when the Yemeni army and air force supported by Saudi Arabia suppressed a rebellion started in the Saada (the Houthis heartland) which killed “Hussien al-Houthi”, who died a martyr since he was representing his district in a struggle to recognize economic marginalization by Ali Abdullah Saleh who was making diplomatic concessions to the Saudis.</p>
@@ -388,16 +391,6 @@ export default function Article() {
               </div>
             </Style.Section> 
           </Section>  
-          <div className="fullWidth-container">
-          <Image className="fullWidth" src="/img/img-yemen-market.jpg" alt="Photo of Yemen market" />
-            <div className="desc-container">
-              <div className="lorem-container">
-                <Style.DescriptionContainer>
-                  <p>Sana'a Market, Rodd Waddington</p>
-                </Style.DescriptionContainer>
-              </div>
-            </div>
-          </div>
           <Section id="section5" data-index="5">  
             <Style.Section className='impacts'>
               <div className="title center">
@@ -406,18 +399,20 @@ export default function Article() {
                 <Line />
               </div>
               <div className="container">
+              {/* IMAGE HERE */}
+              <Image className="halfWidth right" src="/img/img-sanaa.jpg" alt="" />
                 <Style.DateContainer>
                   <Style.DescriptionContainer>
                     <p className='subtitle'>Casualties</p>
                     <p>According to a statement from the president and CEO of the U.S. Institute of Peace Lise Grande to Congress in April 2021:</p>
                     <p>“The conflict in Yemen has lasted 6 years, resulted in the world’s worst humanitarian crisis, wrecked public institutions, created new forms of corruption, fragmented political power and turned Yemen into a failed state likely to collapse, or worse, split into independent, separately administered zones. The humanitarian crisis, in particular, is so shocking in its magnitude, it is hard even to describe”. <a href="https://www.foreign.senate.gov/imo/media/doc/04%2021%2021%20US%20Policy%20in%20Yemen1.pdf"  target="_blank">[U.S. POLICY ON YEMEN]</a></p>
-                    <p>Since 2015, the Saudi-led coalition has carried out more than 24000 air raids using precision-guided munitions made by the US, killing and wounding more than 18,000 Yemenis, of which over 4130 children <a href="https://yemendataproject.org/"  target="_blank">[U.S. POLICY ON YEMEN]</a>:</p>
+                    <p>Since 2015, the Saudi-led coalition has carried out more than 24000 air raids using precision-guided munitions made by the US, killing and wounding more than 18,000 Yemenis, of which over 4130 children <a href="https://yemendataproject.org/"  target="_blank">[15]</a>:</p>
                   </Style.DescriptionContainer>
                 </Style.DateContainer>
                 <Graph src={'https://datawrapper.dwcdn.net/mYf4m/5/'}></Graph>
                 <Style.DateContainer>
                   <Style.DescriptionContainer>
-                    <p>A third of these bombings have been against civilian targets, the intent being to destroy public infrastructure such as food markets, which are essential for the population’s survival. <a href="https://made-in-france.disclose.ngo/en/chapter/food-war/"  target="_blank">[12]</a></p>
+                    <p>A third of these bombings have been against civilian targets, the intent being to destroy public infrastructure such as food markets, which are essential for the population’s survival. <a href="https://made-in-france.disclose.ngo/en/chapter/food-war/"  target="_blank">[16]</a></p>
                     <p>As a part of this campaign we are making public the largest documentation project of massacres committed by the coalition in Yemen, recorded since March 26 2015.</p>
                   </Style.DescriptionContainer>
                 </Style.DateContainer>
@@ -438,7 +433,7 @@ export default function Article() {
                     <br />
                     <br />
                     <p className='subtitle'>Current Truce</p>
-                    <p>The current cease-fire provides hope for the reduction of violence. Abd Rabbu Mansour Hadi, Yemen’s exiled president has said he would transfer power to an eight-member presidential council, suggesting progress in ending the war. All of this comes on the heels of a new Yemen War Powers Resolution — announced by Reps. Pramila Jayapal, D-Wash., and Peter DeFazio, D-Ore. — to end U.S. involvement in the war. <a href="https://theintercept.com/2022/04/09/deconstructed-yemen-war-cease-fire-truce/"  target="_blank">[12]</a></p>
+                    <p>The current cease-fire provides hope for the reduction of violence. Abd Rabbu Mansour Hadi, Yemen’s exiled president has said he would transfer power to an eight-member presidential council, suggesting progress in ending the war. All of this comes on the heels of a new Yemen War Powers Resolution — announced by Reps. Pramila Jayapal, D-Wash., and Peter DeFazio, D-Ore. — to end U.S. involvement in the war. <a href="https://theintercept.com/2022/04/09/deconstructed-yemen-war-cease-fire-truce/"  target="_blank">[17]</a></p>
                   </Style.DescriptionContainer>
                   <div className='youtube'>
                     <iframe className='media' src="https://www.youtube.com/embed/AkyXDDXzPyw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -472,7 +467,18 @@ export default function Article() {
                 </div>
               </div>
             </Style.Section> 
+            <div className="fullWidth-container">
+          <Image className="fullWidth" src="/img/img-yemen-market.jpg" alt="Photo of Yemen market" />
+            <div className="desc-container">
+              <div className="lorem-container">
+                <Style.DescriptionContainer>
+                  <p>Sana'a Market, Rodd Waddington</p>
+                </Style.DescriptionContainer>
+              </div>
+            </div>
+          </div>
           </Section> 
+          
         </Style.Content>
         <Summary />
       </Style.ContentContainer>

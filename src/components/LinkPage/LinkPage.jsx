@@ -20,10 +20,19 @@ export default function LinkPage({ animate = false, children, ...props }) {
     }
   }, []);
   return (
-    <Link {...props}>
-      <Style.LinkPageContainer ref={linkRef} className="linkPage">
-       <span>{ children }</span>
-      </Style.LinkPageContainer>
-    </Link>
+    <>
+      {
+        props.href.indexOf('http') === -1 ?
+          <Link {...props}>
+            <Style.LinkPageContainer ref={linkRef} className="linkPage">
+            <span>{ children }</span>
+            </Style.LinkPageContainer>
+          </Link>
+        :
+          <Style.LinkPageContainer {...props} ref={linkRef} className="linkPage">
+          <span>{ children }</span>
+          </Style.LinkPageContainer>
+      }
+    </>
   )
 }

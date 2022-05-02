@@ -261,7 +261,7 @@ export default function Article() {
                   </Style.DescriptionContainer>
                 </Style.DateContainer>
                 {/* IMAGE HERE */}
-                <Image className="halfWidth right" src="/img/img-yemen-old-map.jpg" alt="" />
+                <Image className="halfWidth center" src="/img/img-yemen-old-map.jpg" alt="" />
               </div>
             </Style.Section> 
           </Section>  
@@ -345,28 +345,18 @@ export default function Article() {
                 <h2><span className='red'>Key</span> <span>players</span></h2>
                 <Line />
               </div>
-              <div className="container">
-                <div className="map-container">
+              <div className="container map-container">
+                <Style.DateContainer>
                   <div>
-                    {/* IMAGE HERE */}
-                    <Image className="halfWidth right" src="/img/img-control-map.jpg" alt="" />
-                    <Style.DescriptionContainer>
-                      <p className='subtitle'>1- The Houthi/Ansarullah</p>
-                      <p>The Houthis are just another name for the Zaidis of Yemen, adopted in 2004 when the Yemeni army and air force supported by Saudi Arabia suppressed a rebellion started in the Saada (the Houthis heartland) which killed “Hussien al-Houthi”, who died a martyr since he was representing his district in a struggle to recognize economic marginalization by Ali Abdullah Saleh who was making diplomatic concessions to the Saudis.</p>
-                    {/* </Style.DescriptionContainer>
-                    <div className="descMap">
-                      <Style.DescriptionContainer>
-                        <p>Légende if légende is needed of course, otherwise on peut just delete ce paragraphe</p>
-                        <p>Légende if légende is needed of course, otherwise on peut just delete ce paragraphe</p>
-                      </Style.DescriptionContainer>
-                      <Image src="/img/img-map-yemen.png" alt="Map of Yemen" />
-                    </div>
-                    <Style.DescriptionContainer> */}
-                      <p>Politicians have described the Houthis as “a revivalist movement” backed by Tehran as a part of the Saudi-Iran Cold War <a href="https://www.chathamhouse.org/sites/default/files/field/field_document/20150218YemenIranSaudi.pdf"  target="_blank">[12]</a> and the majority of Western media has been pushing the same narrative, however history has shown us that the Zaydis have existed in Northern Yemen for over a millenium. The Zaydis are yet again refusing to bend the knee, the Ottoman infidel label has simply evolved to the American classification of terrorrist organisation. It is important to note that the Houthis are resident Zaydi Shiite Muslims, who have significant differences in their doctrine and beliefs from the Shiites who govern Iran.</p>
-                      <p>From an article by Bruce Riedel from the Brookings Institution on February 2, 2022:</p>
-                    </Style.DescriptionContainer>
+                    <Image className="halfWidth left" src="/img/img-control-map.jpg" alt="" />
                   </div>
-                </div>
+                  <Style.DescriptionContainer>
+                    <p className='subtitle'>1- The Houthi/Ansarullah</p>
+                    <p>The Houthis are just another name for the Zaidis of Yemen, adopted in 2004 when the Yemeni army and air force supported by Saudi Arabia suppressed a rebellion started in the Saada (the Houthis heartland) which killed “Hussien al-Houthi”, who died a martyr since he was representing his district in a struggle to recognize economic marginalization by Ali Abdullah Saleh who was making diplomatic concessions to the Saudis.</p>
+                    <p>Politicians have described the Houthis as “a revivalist movement” backed by Tehran as a part of the Saudi-Iran Cold War <a href="https://www.chathamhouse.org/sites/default/files/field/field_document/20150218YemenIranSaudi.pdf"  target="_blank">[12]</a> and the majority of Western media has been pushing the same narrative, however history has shown us that the Zaydis have existed in Northern Yemen for over a millenium. The Zaydis are yet again refusing to bend the knee, the Ottoman infidel label has simply evolved to the American classification of terrorrist organisation. It is important to note that the Houthis are resident Zaydi Shiite Muslims, who have significant differences in their doctrine and beliefs from the Shiites who govern Iran.</p>
+                    <p>From an article by Bruce Riedel from the Brookings Institution on February 2, 2022:</p>
+                  </Style.DescriptionContainer>
+                </Style.DateContainer>
                 <Style.Quote>
                   <blockquote>
                     <p>“The Houthis have won the war in Yemen, defeating their opponents in the civil war, the Saudis who intervened in 2015 against them, and the United States which backed the Saudis. It is a remarkable accomplishment for a militia group with no air force or navy.”</p>
@@ -400,7 +390,7 @@ export default function Article() {
               </div>
               <div className="container">
               {/* IMAGE HERE */}
-              <Image className="halfWidth right" src="/img/img-sanaa.jpg" alt="" />
+              <Image className="halfWidth left" src="/img/img-sanaa.jpg" alt="" />
                 <Style.DateContainer>
                   <Style.DescriptionContainer>
                     <p className='subtitle'>Casualties</p>

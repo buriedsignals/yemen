@@ -10,7 +10,7 @@ import Title from '../Title/Title';
 
 
 const datas = {
-  'Nada': {
+  'nada': {
     title: ['Nada', 'story'],
     description: [
       'Life was good. It had a smooth rhythm: after school, I would take my brother and my scooter to play in the neighborhood before going home to do my homework.',  

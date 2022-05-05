@@ -41,7 +41,7 @@ function App({ Component, pageProps = {} }) {
           <meta name='og:title' content={title} />
           <meta name='og:type' content='site' />
           <meta name='og:url' content={url} />
-          <meta name='og:image' content={'/img/img-meta.png'} />
+          <meta name='og:image' content={url + 'img/img-meta.png'} />
           <meta name='og:site_name' content={title} />
           <meta name='og:description' content={description} />
 
@@ -88,7 +88,7 @@ function App({ Component, pageProps = {} }) {
           <meta name='twitter:title' content={title} />
           <meta name='twitter:description' content={description} />
           <meta name='twitter:creator' content='@buriedsignals' />
-          <meta name='twitter:image:src' content={'/img/img-meta.png'} />
+          <meta name='twitter:image:src' content={url +'img/img-meta.png'} />
     </Head>
     <Layout>
       <Component {...pageProps} />

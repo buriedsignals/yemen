@@ -38,12 +38,12 @@ function App({ Component, pageProps = {} }) {
           {/* 
       Facebook Open Graph meta tags
         documentation: https://developers.facebook.com/docs/sharing/opengraph */}
-          <meta name='og:title' content={title} />
-          <meta name='og:type' content='site' />
-          <meta name='og:url' content={url} />
-          <meta name='og:image' content={url + 'img/img-meta.png'} />
-          <meta name='og:site_name' content={title} />
-          <meta name='og:description' content={description} />
+          <meta property='og:title' content={title} />
+          <meta property='og:type' content='site' />
+          <meta property='og:url' content={url} />
+          <meta property='og:image' content={url + 'img/img-meta.png'} />
+          <meta property='og:site_name' content={title} />
+          <meta property='og:description' content={description} />
 
           <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
           <link

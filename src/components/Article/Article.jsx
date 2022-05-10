@@ -457,16 +457,6 @@ export default function Article() {
                 </div>
               </div>
             </Style.Section> 
-            <div className="fullWidth-container">
-          <Image className="fullWidth" src="/img/img-yemen-market.jpg" alt="Photo of Yemen market" />
-            <div className="desc-container">
-              <div className="lorem-container">
-                <Style.DescriptionContainer>
-                  <p>Sana'a Market, Rodd Waddington</p>
-                </Style.DescriptionContainer>
-              </div>
-            </div>
-          </div>
           </Section> 
           
         </Style.Content>

@@ -94,7 +94,7 @@ export const Popup = ({ ...props }) => {
         </h2>
         <p className='date'>{ date }</p>
       </div>
-      { selectMedia() }
+      {/* { selectMedia() } */}
       <div className="main-container">
         <div className="datas">
           <div className="data">

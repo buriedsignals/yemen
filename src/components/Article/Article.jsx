@@ -130,12 +130,14 @@ export default function Article() {
                   <Line />
                 </div>
                 <Style.DescriptionContainer className='desc'>
-                  <p>Yemen is a territory on the southern tip of the Arabian peninsula which 24 million people call home and which has been designated the world’s worst humanitarian crisis by the UN. Western media has been repeatedly blaming the Houthis, however few of these stories mention that the member countries of the UN Security Council (who are responsible for restoring peace in Yemen) have all sold weapons to Saudi Arabia. <a href="https://made-in-france.disclose.ngo/en/chapter/yemen-a-man-made-crisis/"  target="_blank">[1]</a></p>
+                  <p>Yemen is a territory on the southern tip of the Arabian peninsula which 24 million people call home and which has been designated the world’s worst humanitarian crisis by the UN.</p> 
+                  
+                  {/*Western media has been repeatedly blaming the Houthis, however few of these stories mention that the member countries of the UN Security Council (who are responsible for restoring peace in Yemen) have sold weapons to Saudi Arabia. <a href="https://made-in-france.disclose.ngo/en/chapter/yemen-a-man-made-crisis/"  target="_blank">[1]</a>*/}
                   <p>
                   The Yemen cease-fire which took effect in April is the first serious truce between the country’s warring parties in six years. The factions in Yemen agreed to a two-month truce proposed by the United Nations, it includes a stop to all attacks inside Yemen and outside its borders; the entry of fuel ships to a rebel-controlled port; and the resumption of some commercial flights at the international airport in Yemen’s capital, Sana’a <a href="https://www.nytimes.com/2022/04/02/world/middleeast/yemen-cease-fire.html"  target="_blank">[2]</a>.
                   </p>
-                  <p>This essay puts a historical lens on the current crisis to give a different outlook on the current narrative. Yemen is a very old country with a rich history, full of foreign invasions being foiled by stubborn local resistance.</p>
-                  <p>But first, a few memorable historical facts:</p>
+                  <p>This article gives a historical perspective on the current crisis. Yemen is a very old country with a rich history, full of foreign invasions being foiled by stubborn local resistance.</p>
+                  <p>But first, a few memorable facts.</p>
                 </Style.DescriptionContainer>
               </div>
               <div className="listIntroContainer">
@@ -145,7 +147,7 @@ export default function Article() {
                       <div className="liContainer">
                         <span className='numberList'>1</span>
                         <Style.DescriptionContainer>
-                          <p>Did you know your Starbucks mocha takes its name from the town of al-Mukha in Yemen? For a few years Yemen was the sole coffee producer in the world. Fortunately for the planet the Dutch broke Yemen’s monopoly in the 18th century when they smuggled coffee trees out of the country and cultivated them in their own colonies.</p>
+                          <p>Did you know your Starbucks mocha takes its name from the town of al-Mukha in Yemen? For a few years Yemen was the sole coffee producer in the world.</p>
                         </Style.DescriptionContainer>
                       </div>
                   </div>
@@ -191,7 +193,7 @@ export default function Article() {
                           <div className="itemContainer">
                             <span className='numberList'>5</span>
                             <Style.DescriptionContainer>
-                              <p>Shibam is a walled desert city with mankind’s oldest (and therefore most sustainable) skyscrapers at 500 years old, built by stacking mud bricks and maintained by its few remaining residents.</p>
+                              <p>Shibam is a walled desert city with mankind’s oldest skyscrapers at 500 years old, built by stacking mud bricks and maintained by its few remaining residents.</p>
                             </Style.DescriptionContainer>
                           </div>
                         </div>
@@ -253,11 +255,10 @@ export default function Article() {
                   <Style.DescriptionContainer>
                     <p>The split of Yemen into two countries was not a result of local politics, but of foreign interests. More specifically of British, Ottoman and Egyptian interests.</p>
                     <p>In the 19th century the Sultan of Latej ruled in Aden, the Zaidis ruled in Sana’a and the Hadramaut belonged to the tribes. The British needed a foothold along the gulf for trade and since they’d failed to secure it with the Zaidis they bargained, forged an alliance, betrayed and subsequently evicted the Sultan - declaring Aden a “free zone” in 1850.</p>
-                    <p>Around the same time the Ottomans had taken control of the northern region in spite of continued armed resistance by the Zaydi imams who had triumphed against invasion attemps in 1568, 1613, and 1635. A couple new uprisings later the Ottomans retreated to the mid-South and granted autonomy to the Zaydi regions (yet again) in 1911.</p>
+                    <p>Around the same time the Ottomans had taken control of the northern region in spite of continued armed resistance by the Zaydi imams who had triumphed against invasion attemps in 1568, 1613, and 1635. A couple new uprisings later the Ottomans retreated to the mid-South and granted autonomy to the Zaydi regions in 1911.</p>
                     <p>After the collapse of the Ottoman Empire in 1918, the Turks withdrew from Yemen completely and the northern region’s independence under the Zaydi imams was internationally recognized in 1923. The region transformed into a relatively stable kingdom until the commander of the royal guards staged a coup with Nasser’s support and declared himself President of the Yemen Arab Republic.</p>
                     <p className='darkest'>With the intention of ousting the British, Nasser supplied seventy thousand troups to the Republicans along with military supplies to support Socialist warlords in the South. The British eventually declared the Aden Emergency and left, effectively ending the British Empire. <a href="https://www.britishpathe.com/video/VLVAE67QWVWOZM8YIZMQNQ47JORXK-ADEN-BRITISH-TROOPS-START-FINAL-EVACUATION-OF-ADEN/query/aden+evacuation"  target="_blank">[3]</a>.</p> 
-                    <p className='darkest'>The People’s Republic of Southern Yemen was born, only to be rebranded The Marxist People’s Democratic Republic of Yemen (much nicer) in 1970, otherwise known as a client state of Moscow.</p>
-                    <p className='darkest'>So, what’s the purpose of this historical analysis? To confirm that the Yemenis have a very long history of dealing with brutal foreign invaders and the Zaidis have been a symbol of resistance for hundreds of years.</p>
+                    <p className='darkest'>The People’s Republic of Southern Yemen was born, only to be renamed The Marxist People’s Democratic Republic of Yemen in 1970, a client state of Moscow.</p>
                   </Style.DescriptionContainer>
                 </Style.DateContainer>
                 {/* IMAGE HERE */}
@@ -305,7 +306,6 @@ export default function Article() {
                     <p className='darkest'>On 26 March 2015, a Saudi-led coalition consisting of the UAE, Bahrain, Morocco, Qatar, Sudan, Kuwait, Egypt, and Jordan initiated Operation Decisive Storm which aimed to defeat the Houthis and restore Hadi’s government. The invasion would reverse what the coalition believed to be growing Iranian influence in the region. A couple hours after the coalition was formed, the Obama administration released a statement stressing its support to the coalition and the establishment of a Joint Combined Planning Cell with Saudi Arabia, in addition to pledging logistical and intelligence assistance. <a href="https://obamawhitehouse.archives.gov/the-press-office/2015/03/25/statement-nsc-spokesperson-bernadette-meehan-situation-yemen"  target="_blank">[9]</a></p>
                     <p className='darkest'>The coalition received military equipment and intelligence support from the US, UK and France <a href="https://www.bbc.com/news/world-middle-east-29319423"  target="_blank">[10]</a>, which have been put to use against civilians. All three countries are permanent members of the UN Security Council which is responsible for the welfare of Yemen and its people.</p>
                     <p className='darkest'>In May that year the Houthis formed an alliance with former president Ali Saleh. The coalition ended on the 4th December 2017 with Saleh’s murder after the Houthis accused him of treason when he decided to sideline them in a deal backed by the UAE. <a href="https://www.google.com/url?q=https://www.aljazeera.com/news/2017/12/4/how-did-yemens-houthi-saleh-alliance-collapse&sa=D&source=docs&ust=1651485348688037&usg=AOvVaw0QCHD5e7JTWiWiJbIZHzgg"  target="_blank">[11]</a></p>
-                    <p className='darkest'>Why so much interest in Yemen?</p>
                   </Style.DescriptionContainer>
                 </Style.DateContainer>
                 <Style.Quote>
@@ -352,8 +352,8 @@ export default function Article() {
                   </div>
                   <Style.DescriptionContainer>
                     <p className='subtitle'>1- The Houthi/Ansarullah</p>
-                    <p>The Houthis are just another name for the Zaidis of Yemen, adopted in 2004 when the Yemeni army and air force supported by Saudi Arabia suppressed a rebellion started in the Saada (the Houthis heartland) which killed “Hussien al-Houthi”, who died a martyr since he was representing his district in a struggle to recognize economic marginalization by Ali Abdullah Saleh who was making diplomatic concessions to the Saudis.</p>
-                    <p>Politicians have described the Houthis as “a revivalist movement” backed by Tehran as a part of the Saudi-Iran Cold War <a href="https://www.chathamhouse.org/sites/default/files/field/field_document/20150218YemenIranSaudi.pdf"  target="_blank">[12]</a> and the majority of Western media has been pushing the same narrative, however history has shown us that the Zaydis have existed in Northern Yemen for over a millenium. The Zaydis are yet again refusing to bend the knee, the Ottoman infidel label has simply evolved to the American classification of terrorrist organisation. It is important to note that the Houthis are resident Zaydi Shiite Muslims, who have significant differences in their doctrine and beliefs from the Shiites who govern Iran.</p>
+                    <p>The Houthis are just another name for the Zaidis of Yemen, adopted in 2004 when the Yemeni army and air force supported by Saudi Arabia suppressed a rebellion started in the Saada (the Houthis heartland) which killed “Hussein al-Houthi”, who died a martyr since he was representing his district in a struggle to recognize economic marginalization by Ali Abdullah Saleh who was making diplomatic concessions to the Saudis.</p>
+                    <p>The Houthis have been described as “a revivalist movement” backed by Tehran as a part of the Saudi-Iran Cold War <a href="https://www.chathamhouse.org/sites/default/files/field/field_document/20150218YemenIranSaudi.pdf"  target="_blank">[12]</a>, however history has shown us that the Zaydis have existed in Northern Yemen for over a millenium and are yet again refusing to bend the knee. It is important to note that the Houthis are resident Zaydi Shiite Muslims, who have significant differences in their doctrine and beliefs from the Shiites who govern Iran.</p>
                     <p>From an article by Bruce Riedel from the Brookings Institution on February 2, 2022:</p>
                   </Style.DescriptionContainer>
                 </Style.DateContainer>
@@ -413,7 +413,7 @@ export default function Article() {
                   </Style.DescriptionContainer>
                   <LinkPage href="/map">Discover the map</LinkPage>
                 </div>
-                <Style.DateContainer>
+                {/*<Style.DateContainer>
                   <Style.DescriptionContainer>
                     <p className='subtitle'>Food scarcity</p>
                     <p>In 2015 the UN adopted a resolution for a maritime blockade to be imposed in the Red Sea. Warships intercepting cargo shipments heading for Yemen have been causing significant delays in humanitarian aid intended to reach Yemenis.</p>
@@ -428,7 +428,7 @@ export default function Article() {
                   <div className='youtube'>
                     <iframe className='media' src="https://www.youtube.com/embed/AkyXDDXzPyw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                   </div>
-                </Style.DateContainer>
+                </Style.DateContainer>*/}
               </div>
             </Style.Section>
           </Section>  

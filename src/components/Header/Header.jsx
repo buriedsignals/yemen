@@ -1,4 +1,5 @@
 import IconLogo from '../icons/IconLogo'
+import IconLogoYemenFondation from '../icons/IconLogoYemenFondation'
 import Link from 'next/dist/client/link'
 import * as Style from './Header.syles'
 import IconFacebook from '../icons/IconFacebook'
@@ -29,13 +30,22 @@ export default function Header({animate = false, route = null, ...props}) {
   return (
     <Style.HeaderContainer ref={headerRef} {...props} className={ route == "/article" && 'isArticle' }>
       { route == "/" ? 
-        <Style.LinkLogoContainer href='https://buriedsignals.com' target="_blank" rel="noreferrer">
-          <IconLogo />
-          <Style.TextLogoContainer>
-            <p>Produced by</p>
-            <p>Buried Signals</p>
-          </Style.TextLogoContainer>
-        </Style.LinkLogoContainer>
+        <Style.LinksContainer>
+          <Style.LinkLogoContainer href='https://buriedsignals.com' target="_blank" rel="noreferrer">
+            <IconLogo />
+            <Style.TextLogoContainer>
+              <p>Produced by</p>
+              <p>Buried Signals</p>
+            </Style.TextLogoContainer>
+          </Style.LinkLogoContainer>
+          <Style.LinkLogoContainer href='https://buriedsignals.com' target="_blank" rel="noreferrer">
+            <IconLogoYemenFondation />
+            <Style.TextLogoContainer>
+              <p>In partnership with the</p>
+              <p>Yemen Fondation</p>
+            </Style.TextLogoContainer>
+          </Style.LinkLogoContainer>
+        </Style.LinksContainer>
         : route == "/article" ?
           <LinkPage href="/map">Explore the map</LinkPage>
           : route == "/map" ?

@@ -44,7 +44,7 @@ export const ButtonCredit = styled.button`
   &::after {
     content: '';
     display: block;
-    width: 170px;
+    width: 150px;
     height: 1px;
     margin-left: 20px;
     background: ${colorWhite};
@@ -63,6 +63,10 @@ export const PanelCredit = styled.div`
     line-height: 94.5%;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+  }
+  ul {
+    height: 21.33vh;
+    overflow: scroll;
   }
   li {
     color: ${colorWhite};

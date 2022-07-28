@@ -4,6 +4,7 @@ import Grid from '../Grid/Grid'
 import Header from '../Header/Header'
 import Scotch from '../Scotch/Scotch'
 import Credit from '../Credit/Credit'
+import Disclaimer from '../Disclaimer/Disclaimer'
 import Title from '../Title/Title'
 import Line from '../Line/Line'
 import LinkPage from '../LinkPage/LinkPage'
@@ -69,6 +70,7 @@ export default function Home() {
             <LinkPage animate={true} href="/map">Explore the map</LinkPage>
           </Style.ListLink>
         </Style.Content>
+        <Disclaimer animate={true} />
         <Credit animate={true} />
       </Style.ContentContainer> 
     </Style.PageContainer>

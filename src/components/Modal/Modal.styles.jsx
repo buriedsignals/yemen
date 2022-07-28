@@ -8,7 +8,7 @@ export const ButtonContainer = styled.div`
 
 export const PanelContainer = styled.div`
 position: relative;
-z-index: 3;
+z-index: 9999999;
 `
 
 export const PanelCross = styled.div`

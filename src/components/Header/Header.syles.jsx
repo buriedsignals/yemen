@@ -32,9 +32,15 @@ export const HeaderContainer = styled.div`
   }
 `
 
+export const LinksContainer = styled.div`
+  & a:not(:last-child) {
+    margin-right: 20px;
+  }
+`
+
 
 export const LinkLogoContainer = styled.a`
-  display: flex;
+  display: inline-flex;
   svg {
     display: inline;
   }

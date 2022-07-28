@@ -23,22 +23,12 @@ export default function Disclaimer({ animate = false }) {
       <Modal
         className="disclaimerModal"
         childrenButton={
-          <Style.ButtonDisclaimer ref={buttonRef}>Disclaimers</Style.ButtonDisclaimer>
+          <Style.ButtonDisclaimer ref={buttonRef}>Disclaimer</Style.ButtonDisclaimer>
         }
         childrenPanel={
           <Style.PanelDisclaimer>
-            <h3>Disclaimers</h3>
-            <ul>
-              <li>Tom Vaillant</li>
-              <li>Gregoire Ormieres</li>
-              <li>Remy Dumas</li>
-              <li>Hassan Saffiedine</li>
-              <li>Zeinab Saffiedine</li>
-              <br />
-              <li>WITH DATA FROM:</li>
-              <li>ACLED</li>
-              <li>Yemen Data Project</li>
-            </ul>
+            <h3>Disclaimer</h3>
+            <p>YRRF is a separate and a distinct non-profit organization than the Yemen Tribute although the common goal is raising awareness of the need  in Yemen.</p>
           </Style.PanelDisclaimer>
         }
       />

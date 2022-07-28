@@ -10,7 +10,7 @@ export const CreditContainer = styled.div`
   .panelContainer {
     position: absolute;
     bottom: -26px; right: -26px;
-    width: 20vw;
+    width: 33vw;
     height: 33.33vh;
     padding: 20px 22px;
     background: ${colorBlack};

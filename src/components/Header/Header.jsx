@@ -13,7 +13,7 @@ export default function Header({animate = false, route = null, ...props}) {
   const headerRef = useRef(null);
   const textSocialShare = 'Stop The Blockade !'
   const hashtagSocialShare = 'YemenCantWait'
-  const urlSocialShare = 'https://yemen.buriedsignals.com'
+  const urlSocialShare = 'https://yementribute.com'
   useEffect(() => {
     if (animate) {
       const tl = gsap.timeline()
@@ -54,7 +54,7 @@ export default function Header({animate = false, route = null, ...props}) {
               <LinkPage href="/article">Go back to the article</LinkPage>
       }
       <Style.SocialContainer className="socialContainer">
-        { (route == "/article" || route == "/map") &&  <LinkPage href='https://chng.it/YSz8sBy8hg' target="_blank">Stop the blockade</LinkPage> }
+        { (route == "/article" || route == "/map") &&  <LinkPage href='https://actionnetwork.org/letters/pass-a-war-powers-resolution-to-help-end-the-war-in-yemen?clear_id=true' target="_blank">Stop the blockade</LinkPage> }
         <a className="socialItem" href={`https://www.facebook.com/sharer/sharer.php?p[url]=${urlSocialShare}`} target="_blank">
             <IconFacebook />
         </a>

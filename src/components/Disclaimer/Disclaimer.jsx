@@ -28,7 +28,7 @@ export default function Disclaimer({ animate = false }) {
         childrenPanel={
           <Style.PanelDisclaimer>
             <h3>Disclaimer</h3>
-            <p>YRRF is a separate and a distinct non-profit organization than the Yemen Tribute although the common goal is raising awareness of the need  in Yemen</p>
+            <p>YRRF is a separate and a distinct non-profit organization than the Yemen Tribute although the common goal is raising awareness of the need  in Yemen.</p>
           </Style.PanelDisclaimer>
         }
       />

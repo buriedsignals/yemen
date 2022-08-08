@@ -412,7 +412,7 @@ export default function Article() {
                     <br />
                     <br />
                     <p className='subtitle'>Current Truce</p>
-                    <p>The current cease-fire provides hope for the reduction of violence. Abd Rabbu Mansour Hadi, Yemen’s exiled president has said he would transfer power to an eight-member presidential council, suggesting progress in ending the war. All of this comes on the heels of a new Yemen War Powers Resolution — announced by Reps. Pramila Jayapal, D-Wash., and Peter DeFazio, D-Ore. — to end U.S. involvement in the war. <a href="https://theintercept.com/2022/04/09/deconstructed-yemen-war-cease-fire-truce/"  target="_blank">[17]</a></p>
+                    <p>The current cease-fire provides hope for the reduction of violence. Abd Rabbu Mansour Hadi, Yemen’s exiled president has transferred power to an eight-member presidential council. All of this comes on the heels of a new Yemen War Powers Resolution — introduced by Sen. Bernie Sanders, along with Sens. Patrick Leahy and Elizabeth Warren — to end U.S. involvement in the war. <a href="https://theintercept.com/2022/04/09/deconstructed-yemen-war-cease-fire-truce/"  target="_blank">[18]</a></p>
                   </Style.DescriptionContainer>
                   <div className='youtube'>
                     <iframe className='media' src="https://www.youtube.com/embed/AkyXDDXzPyw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -442,7 +442,7 @@ export default function Article() {
                 </Style.Quote>
                 <div className="helping">
                   <p>Sign our petition for Congress to pressure Saudi Arabia to stop the war on Yemen and end the siege.</p>
-                  <a href='https://chng.it/YSz8sBy8hg' target="_blank">Stop the blockade</a>
+                  <a href='https://actionnetwork.org/letters/pass-a-war-powers-resolution-to-help-end-the-war-in-yemen?clear_id=true' target="_blank">Stop the blockade</a>
                 </div>
               </div>
             </Style.Section> 

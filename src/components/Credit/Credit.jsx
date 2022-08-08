@@ -34,6 +34,7 @@ export default function Credit({ animate = false }) {
               <li>Remy Dumas</li>
               <li>Hassan Saffiedine</li>
               <li>Zeinab Saffiedine</li>
+              <li>Arwa Mokdad</li>
               <br />
               <li>WITH DATA FROM:</li>
               <li>ACLED</li>

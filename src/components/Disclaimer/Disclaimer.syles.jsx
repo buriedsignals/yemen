@@ -10,7 +10,7 @@ export const DisclaimerContainer = styled.div`
   .panelContainer {
     position: absolute;
     bottom: -56px; right: -26px;
-    width: 33vw;
+    width: 20vw;
     height: 33.33vh;
     padding: 20px 22px;
     background: ${colorBlack};
@@ -86,5 +86,6 @@ export const PanelDisclaimer = styled.div`
     font-size: 14px;
     line-height: 150.5%;
     letter-spacing: 0.18em;
+    text-transform: uppercase;
   }
 `

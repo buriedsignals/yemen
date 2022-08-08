@@ -108,7 +108,7 @@ export const ArticleContainer = styled.div`
   background-repeat: repeat, repeat${ scotchsStyleDesktop.repeat };
   background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px)${ scotchsStyleDesktop.image };
   background-position: top left, top left${ scotchsStyleDesktop.position };
-  animation: moveArticle 3s infinite, appear 1.5s 1;
+  animation: moveArticle 30s infinite, appear 1.5s 1;
   // pointer-events: none;
   z-index: 12;
   ${down('md')} {

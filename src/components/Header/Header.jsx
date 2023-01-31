@@ -31,11 +31,11 @@ export default function Header({animate = false, route = null, ...props}) {
     <Style.HeaderContainer ref={headerRef} {...props} className={ route == "/article" && 'isArticle' }>
       { route == "/" ? 
         <Style.LinksContainer>
-          <Style.LinkLogoContainer href='https://buriedsignals.com' target="_blank" rel="noreferrer">
+          <Style.LinkLogoContainer href='https://nuanced.studio' target="_blank" rel="noreferrer">
             <IconLogo />
             <Style.TextLogoContainer>
               <p>Produced by</p>
-              <p>Buried Signals</p>
+              <p>Nuanced</p>
             </Style.TextLogoContainer>
           </Style.LinkLogoContainer>
           <Style.LinkLogoContainer href='https://yemenfoundation.org' target="_blank" rel="noreferrer">

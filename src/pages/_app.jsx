@@ -8,7 +8,7 @@ const title = 'The Yemen Tribute'
 const url = 'https://yemen.buriedsignals.com/'
 const description =
   'A historical and humanitarian overview commemorating the Yemeni fallen.'
-const author = 'Buried Signals'
+const author = 'Nuanced'
 
 function Layout({ children }) {
   return <Dom>{children}</Dom>
@@ -31,7 +31,7 @@ function App({ Component, pageProps = {} }) {
           <meta name='description' content={description} />
           <meta
             name='keywords'
-            content='Buried Signals, Ukraine, war, invasion, Russia, conflict, monitoring, map'
+            content='Nuanced, Ukraine, war, invasion, Russia, conflict, monitoring, map'
           />
           <meta name='robots' content='index,follow' />
           <meta name='distribution' content='web' />
@@ -84,10 +84,10 @@ function App({ Component, pageProps = {} }) {
         documentation: https://dev.twitter.com/cards/getting-started
         Be sure validate your Twitter card markup on the documentation site. */}
           <meta name='twitter:card' content='summary_large_image' />
-          <meta name='twitter:site' content='@buriedsignals' />
+          <meta name='twitter:site' content='@NuancedStudio' />
           <meta name='twitter:title' content={title} />
           <meta name='twitter:description' content={description} />
-          <meta name='twitter:creator' content='@buriedsignals' />
+          <meta name='twitter:creator' content='@NuancedStudio' />
           <meta name='twitter:image:src' content={url +'img/img-meta.png'} />
     </Head>
     <Layout>

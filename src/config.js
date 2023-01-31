@@ -4,7 +4,7 @@ const title = 'The Yemen Tribute'
 const url = 'https://yemen.buriedsignals.com/'
 const description =
   'A historical and humanitarian overview commemorating the Yemeni fallen.'
-const author = 'Buried Signals'
+const author = 'Nuanced'
 
 const Header = () => {
   return (
@@ -21,7 +21,7 @@ const Header = () => {
         {/* Search Engine Optimization Meta Tags */}
         <title>{title}</title>
         <meta name='description' content={description} />
-        <meta name='keywords' content='Buried Signals' />
+        <meta name='keywords' content='Nanced' />
         <meta name='robots' content='index,follow' />
         <meta name='distribution' content='web' />
         {/* 
@@ -73,7 +73,7 @@ const Header = () => {
         documentation: https://dev.twitter.com/cards/getting-started
         Be sure validate your Twitter card markup on the documentation site. */}
         <meta name='twitter:card' content='summary' />
-        <meta name='twitter:site' content='@buriedsignals' />
+        <meta name='twitter:site' content='@NuancedStudio' />
       </Head>
     </>
   )

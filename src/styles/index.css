@@ -186,4 +186,11 @@
   .flickity-page-dots .dot.is-selected {
     opacity: 1;
   }
+  
+  @media screen and (max-width: 992px) {
+    #awwwards,
+    #designrush {
+      display: none;
+    }
+  }
 }

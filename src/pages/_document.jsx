@@ -8,7 +8,7 @@ const title = 'The Yemen Tribute'
 const url = 'https://yemen.buriedsignals.com/'
 const description =
   'A historical and humanitarian overview commemorating the Yemeni dead.'
-const author = 'Nuanced'
+const author = 'Buried Signals Studio'
 
 export default class MyDocument extends Document {
   static async getInitialProps(...args) {

@@ -77,7 +77,7 @@ const Dom = ({ children }) => {
   return (
     <Style.Dom ref={ref} className={ `dom ${ show ? "is-show" : "" }` }>
       <HeaderRouteTitle />
-      {children}    
+      { ref.current && children }
     </Style.Dom>
   )
 }

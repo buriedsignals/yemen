@@ -1,5 +1,6 @@
+import * as Style from './_dom.syles.jsx'
 import useStore from '@/helpers/store'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import useSite from '@/middleware/hooks/use-site'
 import { helmetSettingsFromMetadata } from '@/middleware/lib/site'
@@ -62,13 +63,22 @@ const HeaderRouteTitle = () => {
   return <Helmet {...helmetSettings} />
 }
 const Dom = ({ children }) => {
+  // States
+  const [show, setShow] = useState(false)
+  // Effects
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+      setShow(true)
+    }, 500);
+  }, [])
   const ref = useRef(null)
   useStore.setState({ dom: ref })
   return (
-    <div className='dom' ref={ref}>
+    <Style.Dom ref={ref} className={ `dom ${ show ? "is-show" : "" }` }>
       <HeaderRouteTitle />
-      {children}
-    </div>
+      {children}    
+    </Style.Dom>
   )
 }
 

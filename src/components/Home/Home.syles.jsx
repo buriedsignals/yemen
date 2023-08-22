@@ -7,13 +7,14 @@ export const PageContainer = styled.div`
     0% {opacity: 0;}
     100% {opacity: 1;}
   }
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   // background-image: url(img/bg-landing.jpg);
   // background-size: auto 100%;
   // background-position: center;
   // background-repeat: no-repeat;
   animation: appear 1.5s 1;
+  overflow: hidden;
   .bg {
     position: absolute;
     width: 100vw;

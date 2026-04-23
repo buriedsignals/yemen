@@ -1,25 +1,25 @@
-const plugins = require('next-compose-plugins')
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+const plugins = require("next-compose-plugins");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
-const indexSearch = require('./plugins/search-index')
-const feed = require('./plugins/feed')
-const sitemap = require('./plugins/sitemap')
+const indexSearch = require("./plugins/search-index");
+const feed = require("./plugins/feed");
+const sitemap = require("./plugins/sitemap");
 
 function esbuildLoader(config, options) {
   const jsLoader = config.module.rules.find(
-    (rule) => rule.test && rule.test.test('.js')
-  )
+    (rule) => rule.test && rule.test.test(".js")
+  );
   if (jsLoader && jsLoader.use) {
     if (jsLoader.use.length > 0) {
       jsLoader.use.forEach((e) => {
-        e.loader = 'esbuild-loader'
-        e.options = options
-      })
+        e.loader = "esbuild-loader";
+        e.options = options;
+      });
     } else {
-      jsLoader.use.loader = 'esbuild-loader'
-      jsLoader.use.options = options
+      jsLoader.use.loader = "esbuild-loader";
+      jsLoader.use.options = options;
     }
   }
 }
@@ -28,7 +28,7 @@ const wpConfig = {
   env: {
     WORDPRESS_GRAPHQL_ENDPOINT: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
     WORDPRESS_MENU_LOCATION_NAVIGATION:
-      process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || 'PRIMARY',
+      process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || "PRIMARY",
     WORDPRESS_PLUGIN_SEO: parseEnvValue(
       process.env.WORDPRESS_PLUGIN_SEO,
       false
@@ -42,28 +42,27 @@ const wpConfig = {
     // with `public` prepended. By default, images will be saved at /public/images/og
     // and available at /images/og. If changing, make sure to update the .gitignore
 
-    OG_IMAGE_DIRECTORY: '/images/og',
+    OG_IMAGE_DIRECTORY: "/images/og",
   },
-}
+};
 // the config break if we use next export
 const nextConfig =
-  process.env.EXPORT !== 'true'
+  process.env.EXPORT !== "true"
     ? {
         ...wpConfig,
         webpack(config, { webpack, dev, isServer }) {
           config.plugins.push(
             new webpack.ProvidePlugin({
-              React: 'react',
+              React: "react",
             })
-          )
-          // use esbuild in dev for faster HMR
-          if (dev) {
-            esbuildLoader(config, {
-              loader: 'jsx',
-              target: 'es2017',
-            })
-            // config.optimization.minimizer.shift()
-          }
+          );
+          // esbuild-loader hack disabled: causes webpack stack overflow on Node 20 / Next 11
+          // if (dev) {
+          //   esbuildLoader(config, {
+          //     loader: 'jsx',
+          //     target: 'es2017',
+          //   })
+          // }
 
           // audio support
           config.module.rules.push({
@@ -71,41 +70,41 @@ const nextConfig =
             exclude: config.exclude,
             use: [
               {
-                loader: require.resolve('url-loader'),
+                loader: require.resolve("url-loader"),
                 options: {
                   limit: config.inlineImageLimit,
-                  fallback: require.resolve('file-loader'),
+                  fallback: require.resolve("file-loader"),
                   publicPath: `${config.assetPrefix}/_next/static/images/`,
-                  outputPath: `${isServer ? '../' : ''}static/images/`,
-                  name: '[name]-[hash].[ext]',
+                  outputPath: `${isServer ? "../" : ""}static/images/`,
+                  name: "[name]-[hash].[ext]",
                   esModule: config.esModule || false,
                 },
               },
             ],
-          })
+          });
 
           config.module.rules.push({
             test: /\.(glsl|vs|fs|vert|frag)$/,
             exclude: /node_modules/,
-            use: ['raw-loader', 'glslify-loader'],
-          })
+            use: ["raw-loader", "glslify-loader"],
+          });
 
-          return config
+          return config;
         },
       }
     : {
         ...wpConfig,
-      }
+      };
 
 // manage i18n
-if (process.env.EXPORT !== 'true') {
+if (process.env.EXPORT !== "true") {
   nextConfig.i18n = {
-    locales: ['en-US'],
-    defaultLocale: 'en-US',
-  }
+    locales: ["en-US"],
+    defaultLocale: "en-US",
+  };
 }
 const seoPlugins =
-  process.env.EXPORT === 'true' ? [[indexSearch], [feed], [sitemap]] : []
+  process.env.EXPORT === "true" ? [[indexSearch], [feed], [sitemap]] : [];
 
 module.exports = plugins(
   [
@@ -143,7 +142,7 @@ module.exports = plugins(
     withBundleAnalyzer,
   ],
   nextConfig
-)
+);
 
 /**
  * parseEnv
@@ -151,8 +150,8 @@ module.exports = plugins(
  */
 
 function parseEnvValue(value, defaultValue) {
-  if (typeof value === 'undefined') return defaultValue
-  if (value === true || value === 'true') return true
-  if (value === false || value === 'false') return false
-  return value
+  if (typeof value === "undefined") return defaultValue;
+  if (value === true || value === "true") return true;
+  if (value === false || value === "false") return false;
+  return value;
 }

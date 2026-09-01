@@ -4,7 +4,7 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import useStore from "@/helpers/store";
 
-const MAPTILER_KEY = "yNoXF8Hy1uK6olP1dArJ";
+const MAPTILER_KEY = "aeGatHIJDM8d2AdRAEX1";
 const STYLE_URL = `https://api.maptiler.com/maps/dataviz-dark/style.json?key=${MAPTILER_KEY}`;
 const GEOJSON_URL = "/jsons/yemen.geojson";
 

@@ -9,6 +9,7 @@ const url = 'https://yemen.buriedsignals.com/'
 const description =
   'A historical and humanitarian overview commemorating the Yemeni fallen.'
 const author = 'Buried Signals Studio'
+const image = `${url}img/img-meta.png`
 
 function Layout({ children }) {
   return <Dom>{children}</Dom>
@@ -29,6 +30,7 @@ function App({ Component, pageProps = {} }) {
           {/* Search Engine Optimization Meta Tags */}
           <title>{title}</title>
           <meta name='description' content={description} />
+          <link rel='canonical' href={url} />
           <meta
             name='keywords'
             content='Buried Signals Studio, The Yemen Tribute, Yemen Fondation'
@@ -39,9 +41,14 @@ function App({ Component, pageProps = {} }) {
       Facebook Open Graph meta tags
         documentation: https://developers.facebook.com/docs/sharing/opengraph */}
           <meta property='og:title' content={title} />
-          <meta property='og:type' content='site' />
+          <meta property='og:type' content='website' />
           <meta property='og:url' content={url} />
-          <meta property='og:image' content={url + 'img/img-meta.png'} />
+          <meta property='og:image' content={image} />
+          <meta property='og:image:secure_url' content={image} />
+          <meta property='og:image:type' content='image/png' />
+          <meta property='og:image:width' content='1440' />
+          <meta property='og:image:height' content='810' />
+          <meta property='og:image:alt' content='The Yemen Tribute' />
           <meta property='og:site_name' content={title} />
           <meta property='og:description' content={description} />
 
@@ -88,7 +95,8 @@ function App({ Component, pageProps = {} }) {
           <meta name='twitter:title' content={title} />
           <meta name='twitter:description' content={description} />
           <meta name='twitter:creator' content='@buriedsignals' />
-          <meta name='twitter:image:src' content={url +'img/img-meta.png'} />
+          <meta name='twitter:image' content={image} />
+          <meta name='twitter:image:alt' content='The Yemen Tribute' />
     </Head>
     <Layout>
       <Component {...pageProps} />

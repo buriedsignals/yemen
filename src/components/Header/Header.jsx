@@ -13,7 +13,7 @@ export default function Header({animate = false, route = null, ...props}) {
   const headerRef = useRef(null);
   const textSocialShare = 'Stop The Blockade !'
   const hashtagSocialShare = 'YemenCantWait'
-  const urlSocialShare = 'https://yementribute.com'
+  const urlSocialShare = 'https://yemen.buriedsignals.com'
   useEffect(() => {
     if (animate) {
       const tl = gsap.timeline()
